@@ -1,0 +1,78 @@
+<html>
+<head>
+    Unique and trendy designer dress collections
+</head>
+
+<body background="01.jpg" height="100%" width="100%">
+
+<ul>
+    <li><a href="#">Gallery</a></li>
+    <li id="selected"><a href="#">About Me</a></li>
+    <li><a href="#">Buy</a></li>
+
+</ul>
+<div class="imageDiv">
+    <img src="p.png" onclick="next(2)" class="prev"/>
+
+    <div id="image">
+        <img src="1.png" alt="designer lehenga" class="image">
+    </div>
+
+    <img src="n.png" onclick="next(3)" class="next"/>
+</div>
+</body>
+</html>
+
+<script>
+
+
+    function next(count) {
+        document.getElementById("image").innerHTML = "<img src=\"" + count + ".png\"  height=\"90%\" width=\"30%\" class=\"image\">"
+
+    }
+
+    function prev() {
+        alert(count)
+        document.getElementById("image").innerHTML = "<img src=\"" + count + ".png\"  height=\"90%\" width=\"30%\" class=\"image\">"
+
+    }
+
+
+</script>
+
+<style>
+
+    .imageDiv {
+        width: 100%;
+        height: 70%;
+
+    }
+
+    .image {
+        width: 30%;
+        height: 90%;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        margin-left: -100;
+        margin-top: -290;
+    }
+
+    .prev {
+        width: 4%;
+        height: 8%;
+        position: absolute;
+        top: 50%;
+        left: 32%;
+
+    }
+
+    .next {
+        width: 4%;
+        height: 8%;
+        position: absolute;
+        top: 51%;
+        left: 68%;
+
+    }
+</style>
