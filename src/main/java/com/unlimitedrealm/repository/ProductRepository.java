@@ -17,9 +17,6 @@ public class ProductRepository {
     @Autowired
     DBConnection dbConnection;
 
-    @Autowired
-    ImageRepository imageRepository;
-
     private JacksonDBCollection<Product, String> productCollection;
 
     @PostConstruct
@@ -27,18 +24,8 @@ public class ProductRepository {
         productCollection = JacksonDBCollection.wrap(dbConnection.getDb().getCollection("products"), Product.class, String.class);
     }
 
-    public void save(Product product) {
-        try {
-            imageRepository.saveImage(product.getGalleryImage(), product.getSku() + "-gallery");
-            imageRepository.saveImage(product.getProductImage(), product.getSku() + "-product");
-
-            product.setGalleryImage(null);
-            product.setProductImage(null);
-
-            productCollection.save(product);
-        } catch (Exception e) {
-            throw new RuntimeException("product save failed ", e);
-        }
+    public void saveOrUpdate(Product product) {
+        productCollection.save(product);
     }
 
     public Product find(String sku) {

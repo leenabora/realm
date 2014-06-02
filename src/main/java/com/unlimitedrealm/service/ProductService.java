@@ -18,14 +18,45 @@ public class ProductService {
     ImageRepository imageRepository;
 
     public void saveProduct(Product product) {
-        productRepository.save(product);
+        try {
+
+            Product existingProduct = productRepository.find(product.getSku());
+            if (existingProduct != null) {
+                product.set_id(existingProduct.get_id());
+                if (product.isNewGalleryImageUpload()) {
+                    imageRepository.deleteImage(product.getSku() + "-gallery");
+                }
+                if (product.isNewProductImageUpload()) {
+                    imageRepository.deleteImage(product.getSku() + "-product");
+                }
+            }
+
+            if (product.isNewGalleryImageUpload()) {
+                imageRepository.saveImage(product.getGalleryImage(), product.getSku() + "-gallery");
+            }
+
+            if (product.isNewProductImageUpload()) {
+                imageRepository.saveImage(product.getProductImage(), product.getSku() + "-product");
+            }
+
+            product.clearMultiPartData();
+
+            productRepository.saveOrUpdate(product);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public List<Product> findAll() {
         return productRepository.findAll();
     }
 
+    public Product find(String sku) {
+        return productRepository.find(sku);
+    }
+
     public Image findImage(String fileName) {
         return imageRepository.findImage(fileName);
     }
+
 }

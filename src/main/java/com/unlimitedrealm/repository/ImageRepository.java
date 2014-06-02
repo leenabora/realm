@@ -8,7 +8,6 @@ import com.mongodb.gridfs.GridFSInputFile;
 import com.unlimitedrealm.domain.Image;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;
@@ -28,14 +27,19 @@ public class ImageRepository {
 
     }
 
-    public void saveImage(MultipartFile image, String fileName) throws IOException {
-        GridFSInputFile gfsFile = imageCollection.createFile(image.getInputStream());
+    public void saveImage(Image image, String fileName) throws IOException {
+        GridFSInputFile gfsFile = imageCollection.createFile(image.getResizedContent());
         gfsFile.setFilename(fileName);
+        gfsFile.setMetaData(new BasicDBObject("width", image.getWidth()).append("height", image.getHeight()));
         gfsFile.save();
     }
 
     public Image findImage(String fileName) {
         GridFSDBFile gridFile = imageCollection.findOne(new BasicDBObject("filename", fileName));
-        return new Image(gridFile.getInputStream(),gridFile.getLength());
+        return new Image(gridFile.getInputStream(), gridFile.getLength());
+    }
+
+    public void deleteImage(String fileName) {
+        imageCollection.remove(new BasicDBObject("filename", fileName));
     }
 }

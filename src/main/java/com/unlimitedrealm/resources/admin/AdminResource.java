@@ -5,6 +5,7 @@ import com.unlimitedrealm.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +21,7 @@ public class AdminResource {
     @Autowired
     ProductService productService;
 
-    @RequestMapping(value = "homePage.htm",method = GET)
+    @RequestMapping(value = "homePage.htm", method = GET)
     public String adminHome(ModelMap model) {
         return "admin/admin";
     }
@@ -33,14 +34,22 @@ public class AdminResource {
 
     @RequestMapping(value = "addProductPage.form", method = GET)
     public String showAddProductPage(ModelMap model, HttpServletRequest request) {
-        model.addAttribute("product", new Product());
+        model.addAttribute("product", new Product(true));
         model.addAttribute("baseUrl", request.getContextPath());
         return "admin/addProductPage";
     }
 
-    @RequestMapping(value = "addProduct.htm", method = POST)
-    public String addProduct(Product product) {
+    @RequestMapping(value = "{sku}/editProductPage.form", method = GET)
+    public String showEditProductPage(@PathVariable String sku, ModelMap model, HttpServletRequest request) {
+        Product product = productService.find(sku);
+        model.addAttribute("product", product);
+        model.addAttribute("baseUrl", request.getContextPath());
+        return "admin/editProductPage";
+    }
+
+    @RequestMapping(value = "saveProduct.htm", method = POST)
+    public String saveProduct(Product product) {
         productService.saveProduct(product);
-        return "redirect:/admin/products.htm";
+        return "redirect:/admin/" + product.getSku() + "/editProductPage.form";
     }
 }

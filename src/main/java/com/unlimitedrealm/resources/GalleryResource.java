@@ -11,7 +11,7 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("/gallery")
+@RequestMapping("/gallery.htm")
 public class GalleryResource {
 
     @RequestMapping(method = RequestMethod.GET)

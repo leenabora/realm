@@ -1,17 +1,29 @@
 package com.unlimitedrealm.domain;
 
 
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.bson.types.ObjectId;
+
+import java.io.IOException;
 
 public class Product {
-    String _id;
+    ObjectId _id;
     String sku;
     String description;
     String galleryHeading;
     String galleryDescription;
     String productDescription;
-    CommonsMultipartFile galleryImage;
-    CommonsMultipartFile productImage;
+    Image galleryImage;
+    Image productImage;
+
+    Boolean show;
+
+    public Product(Boolean show) {
+        this.show = show;
+    }
+
+    public Product() {
+    }
 
     public String getSku() {
         return sku;
@@ -53,27 +65,52 @@ public class Product {
         this.productDescription = productDescription;
     }
 
-    public CommonsMultipartFile getGalleryImage() {
-        return galleryImage;
-    }
-
-    public void setGalleryImage(CommonsMultipartFile galleryImage) {
-        this.galleryImage = galleryImage;
-    }
-
-    public CommonsMultipartFile getProductImage() {
-        return productImage;
-    }
-
-    public void setProductImage(CommonsMultipartFile productImage) {
-        this.productImage = productImage;
-    }
-
-    public String get_id() {
+    public ObjectId get_id() {
         return _id;
     }
 
-    public void set_id(String _id) {
+    public void set_id(ObjectId _id) {
         this._id = _id;
     }
+
+    public Boolean getShow() {
+        return show;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public Image getGalleryImage() {
+        return galleryImage;
+    }
+
+    public void setGalleryImage(Image galleryImage) {
+        this.galleryImage = galleryImage;
+    }
+
+    public Image getProductImage() {
+        return productImage;
+    }
+
+    public void setProductImage(Image productImage) {
+        this.productImage = productImage;
+    }
+
+    @JsonIgnore
+    public boolean isNewGalleryImageUpload() {
+        return galleryImage.isNewFileUpload();
+    }
+
+    @JsonIgnore
+    public boolean isNewProductImageUpload() {
+        return productImage.isNewFileUpload();
+    }
+
+    @JsonIgnore
+    public void clearMultiPartData() throws IOException {
+        galleryImage.setMultipartFile(null);
+        productImage.setMultipartFile(null);
+    }
+
 }
