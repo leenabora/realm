@@ -81,6 +81,7 @@ public class Image {
         return multipartFile.getSize() != 0;
     }
 
+    @JsonIgnore
     private InputStream resizeImage(BufferedImage originalImage, int type) throws IOException {
         BufferedImage resizedImage = new BufferedImage(width, height, type);
         Graphics2D g = resizedImage.createGraphics();

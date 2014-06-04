@@ -32,6 +32,13 @@ public class ProductRepository {
         return productCollection.findOne(new BasicDBObject("sku", sku));
     }
 
+    public Product findRandom() {
+        long count = productCollection.count();
+        int randomNum = 0 + (int) (Math.random() * count);
+        System.out.println("------------------------ random number "+randomNum);
+        return productCollection.find().limit(-1).skip(randomNum).next();
+    }
+
     public List<Product> findAll() {
         List<Product> products = new ArrayList<>();
         DBCursor<Product> productCursor = productCollection.find();

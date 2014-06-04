@@ -11,12 +11,14 @@ public class Product {
     String sku;
     String description;
     String galleryHeading;
+    String gallerySubHeading;
     String galleryDescription;
     String productDescription;
     Image galleryImage;
     Image productImage;
 
     Boolean show;
+
 
     public Product(Boolean show) {
         this.show = show;
@@ -95,6 +97,14 @@ public class Product {
 
     public void setProductImage(Image productImage) {
         this.productImage = productImage;
+    }
+
+    public String getGallerySubHeading() {
+        return gallerySubHeading;
+    }
+
+    public void setGallerySubHeading(String gallerySubHeading) {
+        this.gallerySubHeading = gallerySubHeading;
     }
 
     @JsonIgnore

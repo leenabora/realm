@@ -55,8 +55,17 @@ public class ProductService {
         return productRepository.find(sku);
     }
 
+    public Product findRandomProduct() {
+        return productRepository.findRandom();
+    }
+
     public Image findImage(String fileName) {
         return imageRepository.findImage(fileName);
     }
 
+    public Product findRandomGalleryImage() {
+        Product randomProduct = productRepository.findRandom();
+        randomProduct.setGalleryImage(imageRepository.findImage(randomProduct.getSku() + "-gallery"));
+        return randomProduct;
+    }
 }

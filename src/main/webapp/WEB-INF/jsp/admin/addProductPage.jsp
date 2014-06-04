@@ -41,6 +41,12 @@ pageEncoding="UTF-8" %>
                         <form:input path="galleryHeading"/>
                     </td>
                 </tr>
+                <tr>
+                    <td>Gallery Sub Heading:</td>
+                    <td>
+                        <form:input path="gallerySubHeading"/>
+                    </td>
+                </tr>
                 <br/>
                 <tr>
                     <td>Gallery Description:</td>

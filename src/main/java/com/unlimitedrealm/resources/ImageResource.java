@@ -1,6 +1,8 @@
 package com.unlimitedrealm.resources;
 
 import com.unlimitedrealm.domain.Image;
+import org.apache.commons.codec.binary.Base64;
+import com.unlimitedrealm.domain.Product;
 import com.unlimitedrealm.service.ProductService;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,25 @@ public class ImageResource {
             headers.setContentType(MediaType.IMAGE_JPEG); //or what ever type it is
             headers.setContentLength(image.getSize());
             return new HttpEntity<byte[]>(imageBytes, headers);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @RequestMapping(value = "gallery.image", method = GET)
+    @ResponseBody
+    public HttpEntity<byte[]> fetchRandomGalleryImage() {
+        try {
+            Product randomProduct = productService.findRandomGalleryImage();
+            Image galleryImage = randomProduct.getGalleryImage();
+            byte[] imageBytes = IOUtils.toByteArray(galleryImage.getContent());
+
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.IMAGE_JPEG); //or what ever type it is
+            headers.setContentLength(galleryImage.getSize());
+            headers.add("x-sku", randomProduct.getSku());
+            return new HttpEntity<byte[]>(Base64.encodeBase64(imageBytes), headers);
 
         } catch (IOException e) {
             throw new RuntimeException(e);

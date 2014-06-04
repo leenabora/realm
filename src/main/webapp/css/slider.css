@@ -16,7 +16,7 @@
 		margin:0 auto;
 		}
 		
-.items { display:none;}
+.items { display:block;}
 
 .pagination { position:absolute; bottom:84px; right:165px; display:inline-block; z-index:111;}
 .pagination li {float:left; margin-right:10px; position:relative;	}

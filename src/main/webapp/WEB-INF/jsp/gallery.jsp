@@ -15,15 +15,16 @@
     <script src="<%=request.getContextPath()%>/js/cufon-yui.js"></script>
     <script src="<%=request.getContextPath()%>/js/cufon-replace.js"></script>
     <script src="<%=request.getContextPath()%>/js/Bilbo_400.font.js"></script>
-    <script src="<%=request.getContextPath()%>/js/tms-0.4.1.js"></script>
+    <!--<script src="<%=request.getContextPath()%>/js/tms-0.4.1.js"></script>-->
     <script src="<%=request.getContextPath()%>/js/css3-mediaqueries.js"></script>
+    <script src="<%=request.getContextPath()%>/js/gallery.js"></script>
     <script>
-        $(document).ready(function(){
+      /*  $(document).ready(function(){
             $('.slider')._TMS({
                 show:0,
                 pauseOnHover:true,
-                prevBu:false,
-                nextBu:false,
+                prevBu:true,
+                nextBu:true,
                 playBu:false,
                 duration:800,
                 preset:'fade',
@@ -35,7 +36,7 @@
                 waitBannerAnimation:false,
                 progressBar:false
             })
-        });
+        });*/
     </script>
     <!--[if lt IE 8]>
     <div style=' clear: both; text-align:center; position: relative;'>
@@ -78,9 +79,15 @@
 <div id="slide">
     <div class="slider">
         <ul class="items">
-            <li><img src="<%=request.getContextPath()%>/images/slider-1.jpg" alt="" /><div class="banner"><p class="text-1">We've Got <strong>an Idea!</strong></p><p class="text-2">Ut wisi enim ahd minim veniam quis nostrud exerci takltion ulamc orper suscipit lobortis</p></div></li>
-            <li><img src="<%=request.getContextPath()%>/images/slider-2.jpg" alt="" /><div class="banner"><p class="text-1">Here We <strong>Are!</strong></p><p class="text-2">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p></div></li>
-            <li><img src="<%=request.getContextPath()%>/images/slider-3.jpg" alt="" /><div class="banner"><p class="text-1">Stay <strong>Creative!</strong></p><p class="text-2">Feugiat nulla facilisis at vero erots et accumsan et iusto odio dignis sim qui blandit.</p></div></li>
+            <li id="galleryImageContainer">
+                <img id="galleryImage" />
+                <div  id="banner" class="banner">
+                    <p id="galleryHeading" class="text-1">
+                        We've Got
+                    </p>
+                    <p id="galleryDescription" class="text-2">Ut wisi enim ahd minim veniam quis nostrud exerci takltion ulamc orper suscipit lobortis</p>
+                </div>
+            </li>
         </ul>
     </div>
 </div>
