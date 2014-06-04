@@ -16,6 +16,8 @@ public class Product {
     String productDescription;
     Image galleryImage;
     Image productImage;
+    String statistics;
+    String material;
 
     Boolean show;
 
@@ -105,6 +107,22 @@ public class Product {
 
     public void setGallerySubHeading(String gallerySubHeading) {
         this.gallerySubHeading = gallerySubHeading;
+    }
+
+    public String getStatistics() {
+        return statistics;
+    }
+
+    public void setStatistics(String statistics) {
+        this.statistics = statistics;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
     }
 
     @JsonIgnore

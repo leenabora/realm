@@ -34,6 +34,18 @@ pageEncoding="UTF-8" %>
                         <form:input path="description"/>
                     </td>
                 </tr>
+                <tr>
+                    <td>Statistics:</td>
+                    <td>
+                        <form:input path="statistics"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>material:</td>
+                    <td>
+                        <form:input path="material"/>
+                    </td>
+                </tr>
                 <br/>
                 <tr>
                     <td>Gallery Heading:</td>
@@ -54,20 +66,6 @@ pageEncoding="UTF-8" %>
                         <form:input path="galleryDescription"/>
                     </td>
                 </tr>
-                <br/>
-                <tr>
-                    <td>Product Description:</td>
-                    <td>
-                        <form:input path="productDescription"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Show</td>
-                    <td>
-                        <form:checkbox path="show"/>
-                    </td>
-                </tr>
-                <br/>
                 <tr>
                     <table border="1px solid blue">
                         <tr>
@@ -91,7 +89,13 @@ pageEncoding="UTF-8" %>
                     </table>
                 </tr>
                 <br/>
-
+                <br/>
+                <tr>
+                    <td>Product Description:</td>
+                    <td>
+                        <form:input path="productDescription"/>
+                    </td>
+                </tr>
 
                 <tr>
                     <table border="1px solid blue">
@@ -116,6 +120,16 @@ pageEncoding="UTF-8" %>
                     </table>
                 </tr>
                 <br/>
+                <tr>
+                    <td>Show</td>
+                    <td>
+                        <form:checkbox path="show"/>
+                    </td>
+                </tr>
+                <br/>
+
+
+
 
 
                 <tr>

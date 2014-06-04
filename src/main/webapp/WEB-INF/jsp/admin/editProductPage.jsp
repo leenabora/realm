@@ -41,6 +41,20 @@ pageEncoding="UTF-8" %>
                 </tr>
                 <br/>
                 <tr>
+                    <td>Statistics:</td>
+                    <td>
+                        <form:input path="statistics"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>material:</td>
+                    <td>
+                        <form:input path="material"/>
+                    </td>
+                </tr>
+                <br/>
+
+                <tr>
                     <td>Gallery Heading:</td>
                     <td>
                         <form:input path="galleryHeading"/>
@@ -62,21 +76,8 @@ pageEncoding="UTF-8" %>
                 </tr>
                 <br/>
                 <tr>
-                    <td>Product Description:</td>
-                    <td>
-                        <form:input path="productDescription"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Show</td>
-                    <td>
-                        <form:checkbox path="show"/>
-                    </td>
-                </tr>
-
-                <tr>
                     <table border="1px solid blue">
-                    <tr>
+                        <tr>
                             <td>
                                 <img src="<c:url value='/images/${product.sku}-gallery.image'  />"/>
                             </td>
@@ -90,22 +91,27 @@ pageEncoding="UTF-8" %>
                         <tr>
                             <td>Width</td>
                             <td>
-                                <form:input path="galleryImage.width" />
+                                <form:input path="galleryImage.width"/>
                             </td>
                         </tr>
                         <tr>
                             <td>Height</td>
                             <td>
-                                <form:input path="galleryImage.height"  />
+                                <form:input path="galleryImage.height"/>
                             </td>
                         </tr>
                     </table>
                 </tr>
                 <br/>
-
+                <tr>
+                    <td>Product Description:</td>
+                    <td>
+                        <form:input path="productDescription"/>
+                    </td>
+                </tr>
                 <tr>
                     <table border="1px solid blue">
-                    <tr>
+                        <tr>
                             <td>
                                 <img src="<c:url value='/images/${product.sku}-product.image'  />"/>
                             </td>
@@ -119,16 +125,22 @@ pageEncoding="UTF-8" %>
                         <tr>
                             <td>Width</td>
                             <td>
-                                <form:input path="productImage.width" />
+                                <form:input path="productImage.width"/>
                             </td>
                         </tr>
                         <tr>
                             <td>Height</td>
                             <td>
-                                <form:input path="productImage.height"  />
+                                <form:input path="productImage.height"/>
                             </td>
                         </tr>
                     </table>
+                </tr>
+                <tr>
+                    <td>Show</td>
+                    <td>
+                        <form:checkbox path="show"/>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2" align="center"><input type="submit" value="Save Product"/></td>
