@@ -35,13 +35,22 @@ public class ProductRepository {
     public Product findRandom() {
         long count = productCollection.count();
         int randomNum = 0 + (int) (Math.random() * count);
-        System.out.println("------------------------ random number "+randomNum);
         return productCollection.find().limit(-1).skip(randomNum).next();
     }
 
     public List<Product> findAll() {
-        List<Product> products = new ArrayList<>();
         DBCursor<Product> productCursor = productCollection.find();
+        return buildProductList(productCursor);
+    }
+
+    public List<Product> findAllVisible() {
+        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("show", true));
+        return buildProductList(productCursor);
+    }
+
+    private List<Product> buildProductList(DBCursor<Product> productCursor) {
+        List<Product> products = new ArrayList<>();
+
         while (productCursor.hasNext()) {
             Product product = productCursor.next();
             products.add(product);

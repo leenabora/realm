@@ -1,80 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Home</title>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css">
-	<link rel="stylesheet" type="text/css" media="screen" href="css/zerogrid.css">
-	<link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:300italic' rel='stylesheet' type='text/css'>
-    <script src="js/jquery-1.7.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/cufon-yui.js"></script>
-    <script src="js/cufon-replace.js"></script>
-    <script src="js/Bilbo_400.font.js"></script>
-    <script src="js/tms-0.4.1.js"></script>
-	<script src="js/css3-mediaqueries.js"></script>
-    <script>
-		$(document).ready(function(){				   	
-			$('.slider')._TMS({
-				show:0,
-				pauseOnHover:true,
-				prevBu:false,
-				nextBu:false,
-				playBu:false,
-				duration:800,
-				preset:'fade',
-				pagination:true,
-				pagNums:false,
-				slideshow:7000,
-				numStatus:false,
-				banners:'fade',
-				waitBannerAnimation:false,
-				progressBar:false
-			})		
-		});
-	</script>
-	<!--[if lt IE 8]>
-       <div style=' clear: both; text-align:center; position: relative;'>
-         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-        </a>
-      </div>
-    <![endif]-->
-    <!--[if lt IE 9]>
-   		<script type="text/javascript" src="js/html5.js"></script>
-    	<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
-	<![endif]-->
-</head>
-<body>
-   <header> 
-   		<div class="nav-responsive"><div>MENU</div>
-			<select onchange="location=this.value">
-				<option></option>
-				<option value="index.html">Gallery</option>
-				<option value="products.html">Products</option>
-				<option value="about.html">About Me</option>
-				<option value="contacts.html">Contacts</option>
-			</select>
-		</div>
-       <div> 
-          <div>                 	
-              <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1> 
-              <nav>  
-                <ul class="menu">
-                      <li><a href="index.html">Gallery</a></li>
-                      <li class="current"><a href="products.html">Products</a></li>
-                      <li><a href="about.html">About Me</a></li>
-                      <li><a href="contacts.html">Contacts</a></li>
-                  </ul>
-              </nav>
-              <div class="clear"></div>
-          </div>
-      </div>
-    </header>  
+<%@ include file="header.jsp" %>
+<%@ page import="java.util.*" %>
+<%@ page import="com.unlimitedrealm.domain.Product" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
   <!--==============================content================================-->
     <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com. Zerotheme.com!</div>
     	<div class="zerogrid top">
@@ -84,54 +11,61 @@
             		<h2 class="p5">Our Products</h2>
 				</div>
             </div>
-            <div class="col-1-3">
-				<div class="wrap-col">
-	            	<div>
-	                    <img src="images/page4-img1.jpg" alt="" class="img-border">
-	                    <p class="top-4"><a href="#" class="link">At vero eos et accusam et justo</a><br>
-	    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
-	                    <a href="#" class="button top-4">Read More</a>
-	                </div>
-	                <div class="top-7">
-	                    <img src="images/page4-img4.jpg" alt="" class="img-border">
-	                    <p class="top-4"><a href="#" class="link">At vero eos et accusam et justo</a><br>
-	    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
-	                    <a href="#" class="button top-4">Read More</a>
-	                </div>
-				</div>
-            </div>
-            <div class="col-1-3">
-				<div class="wrap-col">
-	            	<div>
-	                    <img src="images/page4-img2.jpg" alt="" class="img-border">
-	                    <p class="top-4"><a href="#" class="link">Tempor invidunt ut labore et dolore</a><br>
-	    Magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
-	                    <a href="#" class="button top-4">Read More</a>
-	                </div>
-	                <div class="top-7">
-	                    <img src="images/page4-img5.jpg" alt="" class="img-border">
-	                    <p class="top-4"><a href="#" class="link">Tempor invidunt ut labore et dolore</a><br>
-	    Magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
-	                    <a href="#" class="button top-4">Read More</a>
-	                </div>
-				</div>
-            </div>
-            <div class="col-1-3">
-				<div class="wrap-col">
-	            	<div>
-	                    <img src="images/page4-img3.jpg" alt="" class="img-border">
-	                    <p class="top-4"><a href="#" class="link">Lorem ipsum dolor sit amet</a><br>
-	    Lorem ipsum dolor sit amet, consetetur sadipscing elitt accusam. Aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore.</p>
-	                    <a href="#" class="button top-4">Read More</a>
-	                </div>
-	                <div class="top-7">
-	                    <img src="images/page4-img6.jpg" alt="" class="img-border">
-	                    <p class="top-4"><a href="#" class="link">Lorem ipsum dolor sit amet</a><br>
-	    Lorem ipsum dolor sit amet, consetetur sadipscing elitt accusam. Aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore.</p>
-	                    <a href="#" class="button top-4">Read More</a>
-	                </div>
-				</div>
-            </div>
+                <div class="divTable">
+                    <%
+                    List
+                    <Product> products =( List
+                        <Product>) request.getAttribute("products");
+                            for (int i = 0; i < products.size(); i++) {
+                            %>
+
+                            <% if ( (i % 3 ==0 && i>2) || ( i==0) ) { %>
+                            <div class="divRow">
+                                <% } %>
+
+                                <div class="divCell">
+                                    <div class="divTableInner">
+                                        <div class="divRow">
+
+                                            <div class="divCell">
+                                                <img src="<%=request.getContextPath()%>/images/<%= products.get(i).getSku() %>-product.image"/>
+                                            </div>
+                                        </div>
+                                        <div class="divRow">
+
+                                            <div class="divCellInner">
+                                                <%= products.get(i).getProductDescription()%>
+                                            </div>
+                                        </div>
+                                        <div class="divRow">
+
+                                            <div class="divTableInnerTbl">
+
+                                                <div class="divRow">
+
+                                                    <div class="divCellButton">
+                                                        <a href="<%=request.getContextPath()%>/admin/<%= products.get(i).getSku() %>/editProductPage.form">Edit</a>
+                                                    </div>
+                                                    <div class="divCellButton">
+
+                                                        <% if(!products.get(i).getShow()) {%>
+                                                        <div class="delete">
+                                                            PRODUCT NOT SHOWN
+                                                        </div>
+                                                        <% } %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <% if ( ((i+1) % 3 ==0 && (i+1)>2) || (i == products.size()-1) ){ %>
+                            </div>
+                            <% }
+
+                            } %>
+                </div>
             <div class="clear"></div>
         </div></div>
     </section> 

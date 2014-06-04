@@ -51,6 +51,10 @@ public class ProductService {
         return productRepository.findAll();
     }
 
+    public List<Product> findAllVisible() {
+        return productRepository.findAllVisible();
+    }
+
     public Product find(String sku) {
         return productRepository.find(sku);
     }

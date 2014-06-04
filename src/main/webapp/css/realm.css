@@ -1,0 +1,43 @@
+
+.divTable{
+    display:table;
+    width:100%;
+    background-color:#eee;
+    border:3px solid rgba(21, 9, 18, 0.95);
+    border-spacing:5px;/*cellspacing:poor IE support for  this*/
+}
+.divTableInner{
+    display:table;
+    width:100%;
+    border:1px solid rgba(28, 52, 135, 0.65);
+    border-spacing:5px;/*cellspacing:poor IE support for  this*/
+    align-content: center;
+}
+.divTableInnerTbl{
+    display:table;
+    width:100%;
+    border-spacing:5px;/*cellspacing:poor IE support for  this*/
+}
+.divRow{
+    display:table-row;
+    width:auto;
+    clear:both;
+}
+.divCell{
+    float:left;
+    margin-bottom :10px;
+    display:table-column;
+    width:33%;
+    align-content: center;
+}
+.divCellInner{
+    float:left;
+    /*margine :10px;*/
+    display:table-column;
+    width:100%;
+}
+.divCellButton{
+    float:left;
+    display:table-column;
+    width:50%;
+}
