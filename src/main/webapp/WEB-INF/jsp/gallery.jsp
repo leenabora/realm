@@ -1,4 +1,6 @@
 <%@ include file="header.jsp" %>
+<script src="<%=request.getContextPath()%>/js/gallery.js"></script>
+
 <div id="slide">
     <div class="slider">
         <ul class="items">

@@ -1,6 +1,8 @@
 package com.unlimitedrealm.resources.admin;
 
 import com.unlimitedrealm.domain.Product;
+import com.unlimitedrealm.service.CommentService;
+import com.unlimitedrealm.service.ContactService;
 import com.unlimitedrealm.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,6 +22,10 @@ public class AdminResource {
 
     @Autowired
     ProductService productService;
+    @Autowired
+    CommentService commentService;
+    @Autowired
+    ContactService contactService;
 
     @RequestMapping(value = "homePage.htm", method = GET)
     public String adminHome(ModelMap model) {
@@ -28,7 +34,7 @@ public class AdminResource {
 
     @RequestMapping(value = "products.htm", method = GET)
     public String listProducts(ModelMap model) {
-        model.addAttribute("products", productService.findAll());
+        model.addAttribute("products", contactService.findAll());
         return "admin/products";
     }
 
@@ -47,9 +53,16 @@ public class AdminResource {
         return "admin/editProductPage";
     }
 
-    @RequestMapping(value = "saveProduct.htm", method = POST)
+    @RequestMapping(value = "save.htm", method = POST)
     public String saveProduct(Product product) {
-        productService.saveProduct(product);
+        productService.save(product);
         return "redirect:/admin/" + product.getSku() + "/editProductPage.form";
     }
+
+    @RequestMapping(value = "contacts.htm", method = GET)
+    public String listContacts(ModelMap model) {
+        model.addAttribute("contacts", contactService.findAll());
+        return "admin/contacts";
+    }
+
 }

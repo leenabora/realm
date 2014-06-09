@@ -17,7 +17,6 @@
     <script src="<%=request.getContextPath()%>/js/cufon-replace.js"></script>
     <script src="<%=request.getContextPath()%>/js/Bilbo_400.font.js"></script>
     <script src="<%=request.getContextPath()%>/js/css3-mediaqueries.js"></script>
-    <script src="<%=request.getContextPath()%>/js/gallery.js"></script>
 
     <!--[if lt IE 8]>
     <div style=' clear: both; text-align:center; position: relative;'>

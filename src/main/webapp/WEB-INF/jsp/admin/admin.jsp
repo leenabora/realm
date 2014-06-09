@@ -8,6 +8,8 @@
 <br/>
 <br/>
 <a href="<%=request.getContextPath()%>/admin/addProductPage.form">Add Product</a>
+<br/>
+<a href="<%=request.getContextPath()%>/admin/contacts.htm">View Contact Request</a>
 
 </body>
 

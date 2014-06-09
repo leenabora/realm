@@ -28,15 +28,15 @@
                                 <div class="divTableInner">
                                     <div class="divRow">
 
-                                        <div class="divCell">
-                                            <a href="<%=request.getContextPath()%>/products/<%= products.get(i).getSku() %>.htm">
+                                        <div class="divCell1">
+                                            <a href="<%=request.getContextPath()%>/products/<%= products.get(i).getSku() %>.htm" class="product-image-link">
                                                 <img src="<%=request.getContextPath()%>/images/<%= products.get(i).getSku() %>-product.image"/></a>
                                         </div>
                                     </div>
                                     <div class="divRow">
 
                                         <div class="divCellInner">
-                                            <a href="<%=request.getContextPath()%>/products/<%= products.get(i).getSku() %>.htm">
+                                            <a href="<%=request.getContextPath()%>/products/<%= products.get(i).getSku() %>.htm" class="product-desc-link">
                                                 <%= products.get(i).getProductDescription()%> </a>
                                         </div>
                                     </div>

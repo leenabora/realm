@@ -17,7 +17,7 @@ public class ProductService {
     @Autowired
     ImageRepository imageRepository;
 
-    public void saveProduct(Product product) {
+    public void save(Product product) {
         try {
 
             Product existingProduct = productRepository.find(product.getSku());
@@ -72,4 +72,5 @@ public class ProductService {
         randomProduct.setGalleryImage(imageRepository.findImage(randomProduct.getSku() + "-gallery"));
         return randomProduct;
     }
+
 }

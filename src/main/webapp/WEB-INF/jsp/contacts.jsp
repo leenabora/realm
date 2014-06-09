@@ -3,12 +3,12 @@
     <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com. Zerotheme.com!</div>
     	<div class="zerogrid top">
 			<div class="row">
-        	<div class="col-2-3">
+        	<div class="">
 				
-            <div class="col-1-3">
+            <div>
 				<div class="wrap-col">
-            	<h2>Contact Form</h2>
-            	<form id="form" method="post" >
+            	<h2 class="align-center">Contact Form</h2>
+            	<form id="form" method="post">
                     <fieldset>
                       <label><input type="text" value="Name" onBlur="if(this.value=='') this.value='Name'" onFocus="if(this.value =='Name' ) this.value=''"></label>
                       <label><input type="text" value="Email" onBlur="if(this.value=='') this.value='Email'" onFocus="if(this.value =='Email' ) this.value=''"></label>

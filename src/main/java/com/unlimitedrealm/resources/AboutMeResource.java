@@ -10,7 +10,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
 @RequestMapping("/aboutMe.htm")
-public class AboutMe {
+public class AboutMeResource {
 
     @Autowired
     ProductService productService;
