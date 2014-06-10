@@ -2,6 +2,7 @@ package com.unlimitedrealm.service;
 
 import com.unlimitedrealm.domain.Contact;
 import com.unlimitedrealm.repository.ContactRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 @Service
 public class ContactService {
 
+    @Autowired
     ContactRepository contactRepository;
 
     public void save(Contact contact) {

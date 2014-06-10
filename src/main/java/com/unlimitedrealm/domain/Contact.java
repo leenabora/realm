@@ -1,12 +1,31 @@
 package com.unlimitedrealm.domain;
 
-public class Contact {
+import org.bson.types.ObjectId;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
 
+import java.util.Date;
+
+public class Contact {
+    ObjectId _id;
+
+    @NotBlank
     String name;
+
+    @Email
+    @NotBlank
     String email;
+
+    @NotBlank
     String phone;
+
+    @NotBlank
     String country;
+
+    @NotBlank
     String message;
+
+    Date date = new Date();
 
     public String getName() {
         return name;
@@ -46,5 +65,21 @@ public class Contact {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public ObjectId get_id() {
+        return _id;
+    }
+
+    public void set_id(ObjectId _id) {
+        this._id = _id;
     }
 }

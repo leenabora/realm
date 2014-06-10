@@ -37,6 +37,56 @@ pageEncoding="UTF-8" %>
         </div>
     </div>
 
+    <div class="">
+        <form:form action="${baseUrl}/comments.htm" method="post" modelAttribute="comment"
+                   id="form">
+            <fieldset>
+                <table>
+
+                    <tr>
+                        <td>
+                            <label class="contactLabel"> Name <strong>*</strong></label>
+                        </td>
+                        <td>
+                            <form:input path="name" type="text"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form:errors path="name" cssClass="error"/>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <label class="contactLabel"> Message <strong>*</strong></label>
+                        </td>
+                        <td>
+                            <form:textarea path="message" type="text"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form:errors path="message" cssClass="error"/>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <div class="btns">
+                            <td>
+                                <a href="#" class="button"
+                                   onClick="document.getElementById('form').submit()">Send</a>
+                            </td>
+                        </div>
+                    </tr>
+
+                </table>
+            </fieldset>
+        </form:form>
+    </div>
+
 
 </div>
 <!--==============================footer=================================-->

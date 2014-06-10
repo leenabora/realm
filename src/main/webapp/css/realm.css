@@ -1,54 +1,75 @@
 
-.divTable{
-    display:table;
-    width:100%;
-    background-color:#eee;
+.divTable {
+    display: table;
+    width: 100%;
+    background-color: #eee;
 }
-.divTableInner{
-    display:table;
-    width:100%;
+
+.divTableInner {
+    display: table;
+    width: 100%;
     align-content: center;
 }
-.divTableInnerTbl{
-    display:table;
-    width:100%;
-    border-spacing:5px;/*cellspacing:poor IE support for  this*/
+
+.divTableInnerTbl {
+    display: table;
+    width: 100%;
+    border-spacing: 5px; /*cellspacing:poor IE support for  this*/
 }
-.divRow{
-    display:table-row;
-    width:auto;
-    clear:both;
+
+.divRow {
+    display: table-row;
+    width: auto;
+    clear: both;
 }
-.divCell{
-    float:left;
-    margin-bottom :10px;
-    display:table-column;
-    width:33%;
+
+.divCell {
+    float: left;
+    margin-bottom: 10px;
+    display: table-column;
+    width: 33%;
     align-content: center;
 }
-.divCellInner{
-    float:left;
+
+.divCellInner {
+    float: left;
     /*margine :10px;*/
-    display:table-column;
-    width:100%;
+    display: table-column;
+    width: 100%;
 }
-.divCellButton{
-    float:left;
-    display:table-column;
-    width:50%;
+
+.divCellButton {
+    float: left;
+    display: table-column;
+    width: 50%;
 }
-.align-center{
-    text-align:center;
+
+.align-center {
+    text-align: center;
 }
-.product-desc-link{
+
+.product-desc-link {
     color: rgb(0, 158, 218);
     font-size: 14px;
     padding-top: 6px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     display: block;
     text-align: center;
 }
-.product-image-link{
-    display:block;
-    text-align:center;
+
+.product-image-link {
+    display: block;
+    text-align: center;
+}
+
+.error {
+    color: #ff0000;
+}
+
+label strong {
+    color: #ff0000;;
+}
+
+.bottomRow {
+    border-bottom: 1px solid #000000;
 }

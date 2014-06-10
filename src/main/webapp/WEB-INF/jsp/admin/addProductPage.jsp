@@ -129,9 +129,6 @@ pageEncoding="UTF-8" %>
                 <br/>
 
 
-
-
-
                 <tr>
                     <td colspan="2" align="center"><input type="submit" value="Add Product"/></td>
                 </tr>
