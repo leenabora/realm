@@ -1,12 +1,17 @@
 $(document).ready(function () {
-    loadGallery()
+    loadGallery(true)
 });
 
 
-function loadGallery() {
+function loadGallery(firstTime) {
     randomProduct();
-    setTimeout(fontRefresh, 40);
-    setTimeout(loadGallery, 6000);
+    if (firstTime) {
+        setTimeout(fontRefresh, 100);
+    }
+    else {
+        setTimeout(fontRefresh, 40);
+    }
+    setTimeout(loadGallery, 4000);
 }
 
 function fontRefresh() {
@@ -32,6 +37,8 @@ function randomProduct() {
         url: getContextPath() + "/gallery/randomProduct.json",
         success: function (product, textStatus, request) {
 
+            animateGalleryImage()
+
             var banner = $('#banner')
             banner.empty()
 
@@ -50,15 +57,35 @@ function randomProduct() {
                 class: 'text-2'
             }).text(product.galleryDescription + "").appendTo(banner);
 
-
-            var imagePath = getContextPath() + "/images/" + product.sku + "-gallery.image"
-            $("#galleryImage").attr('src', imagePath);
+            imageLoad(product);
         },
         error: function (request, textStatus, errorThrown) {
             alert(errorThrown);
         }
     });
 }
+
+function animateGalleryImage() {
+/*
+    var left = $('#galleryImageContainer').offset().left;  // Get the calculated left position
+
+    $("#galleryImageContainer").css({left:left})  // Set the left to its calculated position
+        .animate({"left":"0px"}, "slow");
+
+*/
+
+//    $("#galleryImageContainer").slideToggle(100);
+
+    /* $("#galleryImage").animate({
+     width:'toggle'
+     }, 5000);*/
+}
+
+function imageLoad(product) {
+    var imagePath = getContextPath() + "/images/" + product.sku + "-gallery.image"
+    $("#galleryImage").attr('src', imagePath);
+}
+
 
 function getContextPath() {
     return window.location.pathname.substring(0, window.location.pathname.indexOf("/", 2));

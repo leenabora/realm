@@ -73,3 +73,29 @@ label strong {
 .bottomRow {
     border-bottom: 1px solid #000000;
 }
+
+.logo {
+    font-weight: normal;
+    color: #000;
+    font-size: 36px;
+    line-height: 38px;
+}
+
+.logo-fashion {
+    font-weight: bold;
+    color: #e66319;
+    font-size: 36px;
+    line-height: 38px;
+}
+
+.logo-tagline {
+    font-weight: bolder;
+    font-size: 22px;
+    line-height: 24px;
+}
+.present{
+    font-weight: bolder;
+    font-size: 25px;
+    line-height: 27px;
+
+}

@@ -4,7 +4,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!--==============================content================================-->
 <section id="content">
-    <div class="ic">More Website Templates @ TemplateMonster.com. Zerotheme.com!</div>
     <div class="zerogrid top">
         <div class="row">
             <div class="col-full">
@@ -29,14 +28,16 @@
                                     <div class="divRow">
 
                                         <div class="divCell1">
-                                            <a href="<%=request.getContextPath()%>/products/<%= products.get(i).getSku() %>.htm" class="product-image-link">
+                                            <a href="<%=request.getContextPath()%>/products/<%= products.get(i).getSku() %>.htm"
+                                               class="product-image-link">
                                                 <img src="<%=request.getContextPath()%>/images/<%= products.get(i).getSku() %>-product.image"/></a>
                                         </div>
                                     </div>
                                     <div class="divRow">
 
                                         <div class="divCellInner">
-                                            <a href="<%=request.getContextPath()%>/products/<%= products.get(i).getSku() %>.htm" class="product-desc-link">
+                                            <a href="<%=request.getContextPath()%>/products/<%= products.get(i).getSku() %>.htm"
+                                               class="product-desc-link">
                                                 <%= products.get(i).getProductDescription()%> </a>
                                         </div>
                                     </div>
@@ -55,14 +56,17 @@
     </div>
 </section>
 <!--==============================footer=================================-->
-<footer>
-    <div class="soc-icons"><span>Follow Us:</span><a href="#"><img src="images/icon-1.jpg" alt=""></a><a href="#"><img
-            src="images/icon-2.jpg" alt=""></a><a href="#"><img src="images/icon-3.jpg" alt=""></a></div>
-    <p>© 2012 Start-Up<br> <a rel="nofollow" href="http://www.templatemonster.com/" target="_blank" class="link">Website
-        Template</a> by TemplateMonster.com <br/> <a rel="nofollow"
-                                                     href="http://www.zerotheme.com/432/free-responsive-html5-css3-website-templates.html"
-                                                     target="_blank" class="link">Responsive Templates</a> by <a
-            href="http://www.zerotheme.com" target="_blank">Zerotheme.com</a></p>
-</footer>
+<div class="footer-wrapper">
+    <footer>
+        <div class="soc-icons"><span>Follow Us:</span><a href="#"><img src="images/icon-1.jpg" alt=""></a><a
+                href="#"><img
+                src="images/icon-2.jpg" alt=""></a><a href="#"><img src="images/icon-3.jpg" alt=""></a></div>
+        <p>© 2012 Start-Up<br> <a rel="nofollow" href="http://www.templatemonster.com/" target="_blank" class="link">Website
+            Template</a> by TemplateMonster.com <br/> <a rel="nofollow"
+                                                         href="http://www.zerotheme.com/432/free-responsive-html5-css3-website-templates.html"
+                                                         target="_blank" class="link">Responsive Templates</a> by <a
+                href="http://www.zerotheme.com" target="_blank">Zerotheme.com</a></p>
+    </footer>
+</div>
 </body>
 </html>
