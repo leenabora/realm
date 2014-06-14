@@ -1,6 +1,7 @@
 package com.unlimitedrealm.resources.admin;
 
 import com.unlimitedrealm.domain.Product;
+import com.unlimitedrealm.domain.Sku;
 import com.unlimitedrealm.service.CommentService;
 import com.unlimitedrealm.service.ContactService;
 import com.unlimitedrealm.service.ProductService;
@@ -34,13 +35,13 @@ public class AdminResource {
 
     @RequestMapping(value = "products.htm", method = GET)
     public String listProducts(ModelMap model) {
-        model.addAttribute("products", contactService.findAll());
+        model.addAttribute("products", productService.findAll());
         return "admin/products";
     }
 
     @RequestMapping(value = "addProductPage.form", method = GET)
     public String showAddProductPage(ModelMap model, HttpServletRequest request) {
-        model.addAttribute("product", new Product(true));
+        model.addAttribute("product", new Product(true, Sku.generate(productService.fetchNextSkuSeries().getSku())));
         model.addAttribute("baseUrl", request.getContextPath());
         return "admin/addProductPage";
     }

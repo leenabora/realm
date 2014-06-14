@@ -24,7 +24,7 @@ pageEncoding="UTF-8" %>
                 <tr>
                     <td>SKU:</td>
                     <td>
-                        <form:input path="sku"/>
+                        <form:input path="sku" readonly/>
                     </td>
                 </tr>
                 <br/>
@@ -83,7 +83,7 @@ pageEncoding="UTF-8" %>
                         <tr>
                             <td>Height</td>
                             <td>
-                                <form:input path="galleryImage.height"  value="527"/>
+                                <form:input path="galleryImage.height" value="527"/>
                             </td>
                         </tr>
                     </table>
@@ -108,13 +108,13 @@ pageEncoding="UTF-8" %>
                         <tr>
                             <td>Width</td>
                             <td>
-                                <form:input path="productImage.width"  value="250"/>
+                                <form:input path="productImage.width" value="250"/>
                             </td>
                         </tr>
                         <tr>
                             <td>Height</td>
                             <td>
-                                <form:input path="productImage.height"  value="300"/>
+                                <form:input path="productImage.height" value="300"/>
                             </td>
                         </tr>
                     </table>

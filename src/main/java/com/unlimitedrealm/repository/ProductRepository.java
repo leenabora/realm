@@ -2,6 +2,7 @@ package com.unlimitedrealm.repository;
 
 import com.mongodb.BasicDBObject;
 import com.unlimitedrealm.domain.Product;
+import com.unlimitedrealm.domain.Sku;
 import org.mongojack.DBCursor;
 import org.mongojack.JacksonDBCollection;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +19,30 @@ public class ProductRepository {
     DBConnection dbConnection;
 
     private JacksonDBCollection<Product, String> productCollection;
+    private JacksonDBCollection<Sku, String> skuSeriesCollection;
 
     @PostConstruct
     public void init() {
         productCollection = JacksonDBCollection.wrap(dbConnection.getDb().getCollection("products"), Product.class, String.class);
+        skuSeriesCollection = JacksonDBCollection.wrap(dbConnection.getDb().getCollection("latestSkuCollection"), Sku.class, String.class);
     }
 
     public void saveOrUpdate(Product product) {
         productCollection.save(product);
+    }
+
+    public void saveSku(Sku sku) {
+        skuSeriesCollection.drop();
+        skuSeriesCollection.save(sku);
+    }
+
+    public Sku nextSkuSeries() {
+        DBCursor<Sku> skuCusor = skuSeriesCollection.find();
+        if (skuCusor.hasNext()) {
+            return skuCusor.next();
+        } else {
+            return new Sku("AKSPB-1010");
+        }
     }
 
     public Product find(String sku) {

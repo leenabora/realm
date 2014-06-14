@@ -22,8 +22,9 @@ public class Product {
     Boolean show;
 
 
-    public Product(Boolean show) {
+    public Product(Boolean show, String sku) {
         this.show = show;
+        this.sku = sku;
     }
 
     public Product() {

@@ -99,3 +99,16 @@ label strong {
     line-height: 27px;
 
 }
+
+.divRowProduct {
+    display: table-row;
+    clear: both;
+}
+
+.divCellProduct {
+    float: left;
+    margin: 2px;
+    display: table-column;
+    width: 50%;
+    align-content: center;
+}

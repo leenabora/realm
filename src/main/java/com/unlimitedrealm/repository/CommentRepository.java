@@ -1,5 +1,6 @@
 package com.unlimitedrealm.repository;
 
+import com.mongodb.BasicDBObject;
 import com.unlimitedrealm.domain.Comment;
 import org.mongojack.DBCursor;
 import org.mongojack.JacksonDBCollection;
@@ -28,8 +29,8 @@ public class CommentRepository {
     }
 
 
-    public List<Comment> findAll() {
-        DBCursor<Comment> commentCursor = commentCollection.find();
+    public List<Comment> findAll(String sku) {
+        DBCursor<Comment> commentCursor = commentCollection.find(new BasicDBObject("sku", sku));
         return buildCommentList(commentCursor);
     }
 

@@ -2,6 +2,7 @@ package com.unlimitedrealm.service;
 
 import com.unlimitedrealm.domain.Image;
 import com.unlimitedrealm.domain.Product;
+import com.unlimitedrealm.domain.Sku;
 import com.unlimitedrealm.repository.ImageRepository;
 import com.unlimitedrealm.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +46,10 @@ public class ProductService {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public Sku fetchNextSkuSeries() {
+        return productRepository.nextSkuSeries();
     }
 
     public List<Product> findAll() {

@@ -2,6 +2,7 @@ package com.unlimitedrealm.service;
 
 import com.unlimitedrealm.domain.Comment;
 import com.unlimitedrealm.repository.CommentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 @Service
 public class CommentService {
 
+    @Autowired
     CommentRepository commentRepository;
 
     public void save(Comment comment) {
@@ -19,8 +21,8 @@ public class CommentService {
         }
     }
 
-    public List<Comment> findAll() {
-        return commentRepository.findAll();
+    public List<Comment> findAll(String sku) {
+        return commentRepository.findAll(sku);
     }
 
 

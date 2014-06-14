@@ -26,6 +26,9 @@
         <Contact> contacts =( List
             <Contact>) request.getAttribute("contacts");
                 for (int i = 0; i < contacts.size(); i++) { %>
+                <br/>
+                <br/>
+                <br/>
                 <tr>
                     <td>
                         <table>
