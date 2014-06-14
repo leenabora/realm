@@ -93,7 +93,8 @@ label strong {
     font-size: 22px;
     line-height: 24px;
 }
-.present{
+
+.present {
     font-weight: bolder;
     font-size: 25px;
     line-height: 27px;
@@ -103,12 +104,86 @@ label strong {
 .divRowProduct {
     display: table-row;
     clear: both;
+    width: 100%;
 }
 
 .divCellProduct {
     float: left;
-    margin: 2px;
+    margin-left: 10px;
     display: table-column;
-    width: 50%;
+    width: 45%;
     align-content: center;
+}
+
+.divCellProductMetaData {
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+    display: table-column;
+    width: auto;
+}
+
+.divCellShare {
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+    display: table-column;
+    width: auto;
+}
+.divCellComment {
+    float: left;
+    display: table-column;
+    width: 100%;
+}
+
+.divRowHeading {
+    display: table-row;
+    clear: both;
+    background: #cdcdcd;
+    font-weight: bolder;
+}
+
+.divTableComment {
+    display: table;
+    width: 100%;
+    background-color: #eee;
+    border: 1px solid grey;
+}
+
+.divRowHeadingComment {
+    margin: 20px;
+    border: 1px solid #1b1980;
+    font-size:20px;
+    display: table-row;
+    clear: both;
+    background: #cdcdcd;
+    font-weight: bolder;
+}
+.divCellCommentLabel{
+    float: left;
+    margin: 5px;
+    display: table-column;
+    font-weight: bolder;
+    font-size:20px;
+    width: auto;
+}
+.divCellCommentText{
+    float: left;
+    margin: 5px;
+    display: table-column;
+}
+.divCellProductMetaDataHeading{
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size:20px;
+    display: table-column;
+    width: auto;
+    font-weight: bolder;
+}
+.divTableComments{
+    display: table;
+    width: 100%;
+    background-color: #eee;
+    background: #cdcdcd;
 }

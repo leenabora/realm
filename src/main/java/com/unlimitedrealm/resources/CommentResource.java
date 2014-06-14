@@ -17,8 +17,11 @@ public class CommentResource {
 
     @RequestMapping(method = POST)
     public String saveComment(Comment comment, ModelMap model) {
+        comment.setPublish(false);
         commentService.save(comment);
         model.put("showMessage", true);
-        return "redirect:/contacts";
+        return "redirect:/products/" + comment.getSku() + ".htm";
     }
+
+
 }

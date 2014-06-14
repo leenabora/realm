@@ -66,4 +66,17 @@ public class AdminResource {
         return "admin/contacts";
     }
 
+    @RequestMapping(value = "comments.htm", method = GET)
+    public String listComments(ModelMap model) {
+        model.addAttribute("comments", commentService.findAll());
+        return "admin/comments1";
+    }
+
+    @RequestMapping(value = "comments/publish/{commentId}.htm", method = POST)
+    public String publishComment(@PathVariable String commentId) {
+        commentService.publish(commentId);
+        return "redirect:/admin/comments.htm";
+    }
+
+
 }

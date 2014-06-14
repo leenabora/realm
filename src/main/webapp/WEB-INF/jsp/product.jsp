@@ -10,48 +10,58 @@
     <div class="zerogrid top">
         <div class="row">
             <div class="col-full">
-                <div class="wrap-col">
-                    <h2 class="p5">${ product.getDescription()}</h2>
-                </div>
+                <br/>
                 <div class="divTable">
-                    <div class="divRow">
-                        <div class="divCell">
+                    <div class="divRowProduct">
+                        <div class="divCellProduct">
                             <img src="${baseUrl}/images/${product.sku}-gallery.image"/>
                         </div>
-                        <div class="divCell">
-                            <div class="divtable">
-                                <div class="divRow">
-                                    <div class="divCell">Dress Statistics</div>
-                                    <div class="divCell">${ product.getStatistics()}</div>
+                        <div class="divCellProduct">
+                            <div class="divTable">
+                                <div class="divRowHeading">
+                                    <div class="divCellProductMetaData">DETAILS</div>
                                 </div>
                                 <div class="divRow">
-                                    <div class="divCell">Material</div>
-                                    <div class="divCell">${ product.getMaterial()}</div>
+                                    <div class="divCellProductMetaDataHeading">Item No:</div>
+                                    <div class="divCellProductMetaData">${ product.getSku()}</div>
                                 </div>
                                 <div class="divRow">
-                                    <div class="divCell">Share</div>
+                                    <div class="divCellProductMetaDataHeading">Description:</div>
+                                    <div class="divCellProductMetaData">${ product.getDescription()}</div>
                                 </div>
                                 <div class="divRow">
-                                    <div class="divCell"><img src="<%=request.getContextPath()%>/images/icon-1.jpg"/>
+                                    <div class="divCellProductMetaDataHeading">Dress Statistics:</div>
+                                    <div class="divCellProductMetaData">${ product.getStatistics()}</div>
+                                </div>
+                                <div class="divRow">
+                                    <div class="divCellProductMetaDataHeading">Material:</div>
+                                    <div class="divCellProductMetaData">${ product.getMaterial()}</div>
+                                </div>
+                            <!--    <div class="divRowHeading">
+                                    <div class="divCellProductMetaData">SHARE</div>
+                                </div>
+                                <div class="divRow">
+                                    <div class="divCellShare"><img src="<%=request.getContextPath()%>/images/icon-1.jpg"/>
                                     </div>
-                                    <div class="divCell"><img src="<%=request.getContextPath()%>/images/icon-2.jpg"/>
+                                    <div class="divCellShare"><img src="<%=request.getContextPath()%>/images/icon-2.jpg"/>
                                     </div>
-                                    <div class="divCell"><img src="<%=request.getContextPath()%>/images/icon-3.jpg"/>
+                                    <div class="divCellShare"><img src="<%=request.getContextPath()%>/images/icon-3.jpg"/>
                                     </div>
+                                </div>-->
+                                <div class="divRowHeadingComment">
+                                    COMMENT/ENQUIRY
                                 </div>
-                              <!--  <div class="divRow">
-                                    Comment/Enquiry
-                                </div>
-                                <div class="divRow">
-                                    <div class="divCell">
-                                        <div class="divTable">
+                                <div class="divRowProduct">
+                                    <div class="divCellComment">
+                                        <div class="divTableComment">
                                             <form:form action="${baseUrl}/comments.htm" method="post"
                                                        modelAttribute="comment" id="form">
+                                                <form:hidden path="sku" value="${product.sku}" />
                                                 <div class="divRow">
-                                                    <div class="divCell">
-                                                        <label class="contactLabel"> Name <strong>*</strong></label>
+                                                    <div class="divCellCommentLabel">
+                                                         Name <strong>*</strong>
                                                     </div>
-                                                    <div class="divCell">
+                                                    <div class="divCellCommentText">
                                                         <form:input path="contact.name" type="text"/>
                                                     </div>
                                                 </div>
@@ -61,10 +71,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="divRow">
-                                                    <div class="divCell">
-                                                        <label class="contactLabel"> Message <strong>*</strong></label>
+                                                    <div class="divCellCommentLabel">
+                                                         Message <strong>*</strong>
                                                     </div>
-                                                    <div class="divCell">
+                                                    <div class="divCellCommentText">
                                                         <form:textarea path="contact.message" type="text"/>
                                                     </div>
                                                 </div>
@@ -78,13 +88,13 @@
                                             </form:form>
                                         </div>
                                     </div>
-                                </div>-->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="divTable">
+            <div class="divTableComments">
                 <%
                 List
                 <Comment> comments =( List
@@ -101,7 +111,7 @@
 
                         <div class="divRow">
                             <div class="divCell">
-                                From : <%= comments.get(i).getContact().getName()%>
+                                 <%= comments.get(i).getContact().getName()%>
                             </div>
                         </div>
 

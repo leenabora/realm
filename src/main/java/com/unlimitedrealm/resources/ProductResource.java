@@ -35,7 +35,7 @@ public class ProductResource {
     @RequestMapping(value = "{sku}.htm", method = GET)
     public String product(@PathVariable String sku, ModelMap model, HttpServletRequest request) {
         Product product = productService.find(sku);
-        List<Comment> comments = commentService.findAll(sku);
+        List<Comment> comments = commentService.findAllPublished(sku);
         model.addAttribute("product", product);
         model.addAttribute("comment", new Comment());
         model.addAttribute("comments", comments);

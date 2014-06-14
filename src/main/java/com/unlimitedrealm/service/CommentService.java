@@ -21,9 +21,16 @@ public class CommentService {
         }
     }
 
-    public List<Comment> findAll(String sku) {
-        return commentRepository.findAll(sku);
+    public List<Comment> findAllPublished(String sku) {
+        return commentRepository.findAllPublished(sku);
+    }
+
+    public List<Comment> findAll() {
+        return commentRepository.findAll();
     }
 
 
+    public void publish(String commentId) {
+         commentRepository.publish(commentId);
+    }
 }

@@ -2,6 +2,7 @@ package com.unlimitedrealm.repository;
 
 import com.mongodb.BasicDBObject;
 import com.unlimitedrealm.domain.Comment;
+import org.bson.types.ObjectId;
 import org.mongojack.DBCursor;
 import org.mongojack.JacksonDBCollection;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,9 @@ import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class CommentRepository {
@@ -28,9 +31,16 @@ public class CommentRepository {
         commentCollection.save(comment);
     }
 
+    public List<Comment> findAllPublished(String sku) {
+        Map params = new HashMap<>();
+        params.put("sku", sku);
+        params.put("publish", true);
+        DBCursor<Comment> commentCursor = commentCollection.find(new BasicDBObject(params));
+        return buildCommentList(commentCursor);
+    }
 
-    public List<Comment> findAll(String sku) {
-        DBCursor<Comment> commentCursor = commentCollection.find(new BasicDBObject("sku", sku));
+    public List<Comment> findAll() {
+        DBCursor<Comment> commentCursor = commentCollection.find();
         return buildCommentList(commentCursor);
     }
 
@@ -45,6 +55,11 @@ public class CommentRepository {
     }
 
 
+    public void publish(String commentId) {
+        Comment comment = commentCollection.findOne(new BasicDBObject("_id", new ObjectId(commentId)));
+        comment.setPublish(true);
+        saveOrUpdate(comment);
+    }
 }
 
 

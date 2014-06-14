@@ -4,6 +4,11 @@
 
 <body>
 
+<br/>
+<br/>
+<a href="<%=request.getContextPath()%>/gallery.htm">Main Site</a>
+<br/>
+<br/>
 <a href="<%=request.getContextPath()%>/admin/products.htm">View Products</a>
 <br/>
 <br/>
@@ -11,7 +16,6 @@
 <br/>
 <br/>
 <a href="<%=request.getContextPath()%>/admin/contacts.htm">View Contact Request</a>
-
 <br/>
 <br/>
 <a href="<%=request.getContextPath()%>/admin/comments.htm">View Comments</a>
