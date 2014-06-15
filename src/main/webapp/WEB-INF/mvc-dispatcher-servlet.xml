@@ -23,11 +23,12 @@
         <property name="maxUploadSize" value="9500000"/>
     </bean>
 
-    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
-        <property name="locations">
-            <list>
-                <value>file:/realmconfig/config.properties</value>
-            </list>
-        </property>
-    </bean>
+    <mvc:annotation-driven>
+        <mvc:message-converters register-defaults="true">
+            <bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <context:property-placeholder location="file:/realmconfig/config.properties"/>
+
 </beans>

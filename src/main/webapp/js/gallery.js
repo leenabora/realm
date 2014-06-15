@@ -9,7 +9,7 @@ function loadGallery(firstTime) {
         setTimeout(fontRefresh, 100);
     }
     else {
-        setTimeout(fontRefresh, 40);
+        setTimeout(fontRefresh, 30);
     }
     setTimeout(loadGallery, 4000);
 }

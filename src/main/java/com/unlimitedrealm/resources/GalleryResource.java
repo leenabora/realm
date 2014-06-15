@@ -10,6 +10,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 
@@ -25,7 +26,7 @@ public class GalleryResource {
         return "gallery";
     }
 
-    @RequestMapping(value = "gallery/randomProduct.json", method = GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "gallery/randomProduct.json", method = GET, produces = APPLICATION_JSON_VALUE)
     @ResponseBody
     public Product randomProduct(ModelMap model) {
         return productService.findRandomProduct();

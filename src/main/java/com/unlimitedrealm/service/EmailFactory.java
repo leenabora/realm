@@ -1,5 +1,6 @@
 package com.unlimitedrealm.service;
 
+import com.unlimitedrealm.domain.Comment;
 import com.unlimitedrealm.domain.Contact;
 import org.antlr.stringtemplate.StringTemplate;
 import org.apache.commons.io.IOUtils;
@@ -13,8 +14,12 @@ public class EmailFactory {
     @Value("${logo}")
     String logo;
 
+    @Value("${productImage}")
+    String productImage;
+
     private final StringTemplate thanksForContactingEmail;
     private final StringTemplate contactNotification;
+    private final StringTemplate commentNotification;
 
     public EmailFactory() {
         try {
@@ -23,10 +28,12 @@ public class EmailFactory {
 
             cpr = new ClassPathResource("email_templates/contactNotification.html");
             contactNotification = new StringTemplate(IOUtils.toString(cpr.getInputStream()));
+
+            cpr = new ClassPathResource("email_templates/commentNotification.html");
+            commentNotification = new StringTemplate(IOUtils.toString(cpr.getInputStream()));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public String thanksForContacting(Contact contact) {
@@ -42,5 +49,12 @@ public class EmailFactory {
         contactNotification.setAttribute("country", contact.getCountry());
         contactNotification.setAttribute("message", contact.getMessage());
         return contactNotification.toString();
+    }
+
+    public String commentNotification(Comment comment) {
+        commentNotification.setAttribute("name", comment.getContact().getName());
+        commentNotification.setAttribute("message", comment.getContact().getMessage());
+        commentNotification.setAttribute("product", productImage.replaceAll("\\{sku\\}", comment.getSku()));
+        return commentNotification.toString();
     }
 }

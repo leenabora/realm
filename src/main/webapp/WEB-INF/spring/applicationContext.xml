@@ -27,13 +27,6 @@
         <constructor-arg index="1" value="${email.from}"/>
     </bean>
 
-    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
-        <property name="locations">
-            <list>
-                <value>file:/realmconfig/config.properties</value>
-            </list>
-        </property>
-    </bean>
 
 
 </beans>
