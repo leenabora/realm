@@ -43,6 +43,7 @@ public class ProductService {
             product.clearMultiPartData();
 
             productRepository.saveOrUpdate(product);
+            productRepository.saveSkuSeries(new Sku(product.getSku()));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

@@ -16,7 +16,8 @@
     <script src="<%=request.getContextPath()%>/js/cufon-yui.js"></script>
     <script src="<%=request.getContextPath()%>/js/cufon-replace.js"></script>
     <script src="<%=request.getContextPath()%>/js/Bilbo_400.font.js"></script>
-    <script src="<%=request.getContextPath()%>/js/css3-mediaqueries.js"></script>
+    <script src="<%=request.getContextPath()%>/js/realm.js"></script>
+
 
     <!--[if lt IE 8]>
     <div style=' clear: both; text-align:center; position: relative;'>
@@ -33,15 +34,6 @@
     <![endif]-->
 
 
-    <script>
-        var prevTab = "gallery";
-        function changeTab(currentTab) {
-            $('#' + prevTab).removeClass("current")
-            $('#' + currentTab).addClass("current")
-            prevTab = currentTab;
-
-        }
-    </script>
 </head>
 <body>
 <header>
@@ -60,15 +52,10 @@
             <h1><a href="index.html"><img src="<%=request.getContextPath()%>/images/logo1.png" alt=""></a></h1>
             <nav>
                 <ul class="menu">
-                    <li id="gallery"><a href="<%=request.getContextPath()%>/gallery.htm"
-                                        onclick="changeTab('gallery');">Gallery</a>
-                    </li>
-                    <li id="products"><a href="<%=request.getContextPath()%>/products/all.htm"
-                                         onclick="changeTab('products');">Products</a></li>
-                    <li id="aboutMe"><a href="<%=request.getContextPath()%>/aboutMe.htm"
-                                        onclick="changeTab('aboutMe');">About Me</a></li>
-                    <li id="contacts"><a href="<%=request.getContextPath()%>/contacts.htm"
-                                         onclick="changeTab('contacts');">Contacts</a></li>
+                    <li  id="gallery" ><a href="<%=request.getContextPath()%>/gallery.htm">Gallery</a></li>
+                    <li id="products"><a href="<%=request.getContextPath()%>/products/all.htm">Products</a></li>
+                    <li id="aboutMe"><a href="<%=request.getContextPath()%>/aboutMe.htm">About Me</a></li>
+                    <li id="contacts"><a href="<%=request.getContextPath()%>/contacts.htm">Contacts</a></li>
                 </ul>
             </nav>
             <div class="clear"></div>

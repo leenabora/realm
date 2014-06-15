@@ -8,6 +8,8 @@ pageEncoding="UTF-8" %>
 <%@ include file="header.jsp" %>
 
 <!--==============================content================================-->
+<input type="hidden" id="currentPage" value="contacts"/>
+
 <section id="content" xmlns:form="http://www.w3.org/1999/xhtml">
     <div class="zerogrid top">
         <div class="row">

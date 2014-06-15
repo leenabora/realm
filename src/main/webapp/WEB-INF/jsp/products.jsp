@@ -3,6 +3,8 @@
 <%@ page import="com.unlimitedrealm.domain.Product" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!--==============================content================================-->
+<input type="hidden" id="currentPage" value="products"/>
+
 <section id="content">
     <div class="zerogrid top">
         <div class="row">

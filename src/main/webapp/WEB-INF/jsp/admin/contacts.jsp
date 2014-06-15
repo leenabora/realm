@@ -16,25 +16,19 @@
 <h1>
     Contacts :
 </h1>
-
 <body>
-
 <div>
     <table>
-
         <% List
         <Contact> contacts =( List
             <Contact>) request.getAttribute("contacts");
                 for (int i = 0; i < contacts.size(); i++) { %>
-                <br/>
-                <br/>
-                <br/>
                 <tr>
-                    <td>
-                        <table>
+                    <td class="contactTableOuter">
+                        <table class="contactTable">
 
                             <tr>
-                                <td>
+                                <td class="boldText">
                                     Date
                                 </td>
                                 <td>
@@ -42,7 +36,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="boldText">
                                     Name
                                 </td>
                                 <td>
@@ -50,7 +44,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="boldText">
                                     Email
                                 </td>
                                 <td>
@@ -58,7 +52,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="boldText">
                                     Phone
                                 </td>
                                 <td>
@@ -66,7 +60,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td class="boldText">
                                     Country
                                 </td>
                                 <td>
@@ -75,7 +69,7 @@
                             </tr>
 
                             <tr class="bottomRow">
-                                <td>
+                                <td class="boldText">
                                     Message
                                 </td>
                                 <td>

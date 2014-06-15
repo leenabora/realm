@@ -24,7 +24,7 @@ pageEncoding="UTF-8" %>
                 <tr>
                     <td>SKU:</td>
                     <td>
-                        <form:input path="sku" readonly/>
+                        <form:input path="sku"  readonly="true" />
                     </td>
                 </tr>
                 <br/>

@@ -24,14 +24,14 @@ public class ProductRepository {
     @PostConstruct
     public void init() {
         productCollection = JacksonDBCollection.wrap(dbConnection.getDb().getCollection("products"), Product.class, String.class);
-        skuSeriesCollection = JacksonDBCollection.wrap(dbConnection.getDb().getCollection("latestSkuCollection"), Sku.class, String.class);
+        skuSeriesCollection = JacksonDBCollection.wrap(dbConnection.getDb().getCollection("skuSeries"), Sku.class, String.class);
     }
 
     public void saveOrUpdate(Product product) {
         productCollection.save(product);
     }
 
-    public void saveSku(Sku sku) {
+    public void saveSkuSeries(Sku sku) {
         skuSeriesCollection.drop();
         skuSeriesCollection.save(sku);
     }

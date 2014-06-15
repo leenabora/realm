@@ -1,5 +1,7 @@
 <%@ include file="header.jsp" %>
 <!--==============================content================================-->
+<input type="hidden" id="currentPage" value="aboutMe"/>
+
 <section id="content">
     <div class="zerogrid top">
         <div class="row">

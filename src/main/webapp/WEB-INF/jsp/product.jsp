@@ -6,6 +6,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!--==============================content================================-->
+<input type="hidden" id="currentPage" value="products"/>
+
 <section id="content">
     <div class="zerogrid top">
         <div class="row">

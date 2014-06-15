@@ -54,7 +54,7 @@ public class AdminResource {
         return "admin/editProductPage";
     }
 
-    @RequestMapping(value = "save.htm", method = POST)
+    @RequestMapping(value = "saveProduct.htm", method = POST)
     public String saveProduct(Product product) {
         productService.save(product);
         return "redirect:/admin/" + product.getSku() + "/editProductPage.form";
