@@ -123,6 +123,7 @@ pageEncoding="UTF-8" %>
         </div>
 </section>
 <!--==============================footer=================================-->
+<%@ include file="footer.jsp" %>
 
 </body>
 </html>
