@@ -1,7 +1,10 @@
 $(document).ready(function () {
-    loadGallery(true)
+   // loadGallery(true)
 });
 
+function animate(){
+
+}
 
 function loadGallery(firstTime) {
     randomProduct();

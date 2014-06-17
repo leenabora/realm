@@ -238,3 +238,9 @@ label strong {
     font-size: 24;
     font-weight: bolder;
 }
+.gallery-image-div{
+    position:absolute;
+    left:10px;
+    top:80px;
+    visibility:hidden;
+}
