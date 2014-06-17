@@ -1,3 +1,5 @@
+<%@ include file="header.jsp" %>
+
 <%@ page import="java.util.*" %>
 <%@ page import="com.unlimitedrealm.domain.Contact" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -5,12 +7,11 @@ pageEncoding="UTF-8" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%@ include file="header.jsp" %>
 
 <!--==============================content================================-->
 <input type="hidden" id="currentPage" value="contacts"/>
 
-<section id="content" xmlns:form="http://www.w3.org/1999/xhtml">
+<section id="content" >
     <div class="zerogrid top">
         <div class="row">
             <div class="">

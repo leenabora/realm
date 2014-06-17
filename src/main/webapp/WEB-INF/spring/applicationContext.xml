@@ -25,6 +25,7 @@
     <bean id="mailUtils" class="com.unlimitedrealm.utils.MailUtils">
         <constructor-arg index="0" ref="mailSender"/>
         <constructor-arg index="1" value="${email.from}"/>
+        <constructor-arg index="2" value="${email.from.name}"/>
     </bean>
 
 

@@ -17,6 +17,7 @@
     <script src="<%=request.getContextPath()%>/js/cufon-replace.js"></script>
     <script src="<%=request.getContextPath()%>/js/Bilbo_400.font.js"></script>
     <script src="<%=request.getContextPath()%>/js/realm.js"></script>
+    <script src="<%=request.getContextPath()%>/js/windowsize.js"></script>
 
 
     <!--[if lt IE 8]>

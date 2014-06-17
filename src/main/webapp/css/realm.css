@@ -79,6 +79,7 @@ label strong {
     color: #000;
     font-size: 36px;
     line-height: 38px;
+    margin-left: 70px;
 }
 
 .logo-fashion {
@@ -232,4 +233,8 @@ label strong {
 .divCellContactsBtn {
     width: 40%;
     margin: 3px;
+}
+.error{
+    font-size: 24;
+    font-weight: bolder;
 }

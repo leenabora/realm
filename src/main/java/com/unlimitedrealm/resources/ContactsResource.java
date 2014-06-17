@@ -2,6 +2,8 @@ package com.unlimitedrealm.resources;
 
 import com.unlimitedrealm.domain.Contact;
 import com.unlimitedrealm.service.ContactService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -17,6 +19,9 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @Controller
 @RequestMapping("/contacts.htm")
 public class ContactsResource {
+
+    static final Logger LOG = LoggerFactory.getLogger(ContactsResource.class);
+
 
     @Autowired
     ContactService contactService;

@@ -7,8 +7,6 @@
         <div class="row">
             <div>
                 <div>
-                    <h2>About Me</h2>
-
                     <div class="box-5 right-1">
                         <img src="images/me.jpg" alt="" class="img-border fleft">
 
@@ -47,7 +45,6 @@
                             unique designs, I have decided to turn my passion into an entrepreneurial venture. In a hope
                             that my craft brings as much joy to others as it does to me.
                         </p>
-
                         <br/>
 
                         <p>

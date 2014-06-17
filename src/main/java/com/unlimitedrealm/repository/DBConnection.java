@@ -5,6 +5,7 @@ import com.mongodb.MongoClient;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PreDestroy;
 import java.net.UnknownHostException;
 
 @Component
@@ -22,5 +23,10 @@ public class DBConnection {
 
     public DB getDb() {
         return db;
+    }
+
+    @PreDestroy
+    public void cleanup() {
+        db.getMongo().close();
     }
 }

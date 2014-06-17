@@ -1,0 +1,25 @@
+<configuration>
+    <appender name="opslog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/realmconfig/logs/realm.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/realmconfig/logs/realm-%d{dd-MM-yyyy}.%i.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>%date{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %-5level - %msg%n</pattern>
+                <fileHeader>timestamp request-id error-code error-message</fileHeader>
+            </layout>
+            <charset>UTF8</charset>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="opslog"/>
+    </root>
+
+    <logger name="com.unlimitedrealm" level="all" additivity="false">
+        <appender-ref ref="opslog"/>
+    </logger>
+
+
+</configuration>
