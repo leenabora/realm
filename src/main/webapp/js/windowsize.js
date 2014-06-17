@@ -1,6 +1,9 @@
 $(document).ready(function () {
+    totalHeight = $(document).height()
     currentPage = $('#currentPage').val()
-    if (currentPage != 'products') {
-        $('#content').attr("style", "height:75%");
+
+    if (totalHeight < 820 && currentPage != 'products') {
+        contentHeight = ( (totalHeight * 70) / 100) + "px"
+        $('#content').attr("style", "height:" + contentHeight);
     }
 });

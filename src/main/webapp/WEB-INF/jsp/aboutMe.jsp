@@ -61,13 +61,12 @@
                         </p>
                     </div>
                 </div>
-
             </div>
             <div class="row">
-
-                <div class="clear"></div>
+                <div class="clear"/>
             </div>
         </div>
+    </div>
 </section>
 <!--==============================footer=================================-->
 <%@ include file="footer.jsp" %>
