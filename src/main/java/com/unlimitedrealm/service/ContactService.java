@@ -53,7 +53,7 @@ public class ContactService {
                 String contactNotification = emailFactory.contactNotification(contact);
                 mailUtils.sendMail("leenabora1@gmail.com", "Contact request", contactNotification);
             } catch (Exception e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
         }
     }

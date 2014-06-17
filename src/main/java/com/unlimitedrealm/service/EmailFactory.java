@@ -37,12 +37,14 @@ public class EmailFactory {
     }
 
     public String thanksForContacting(Contact contact) {
+        thanksForContactingEmail.reset();
         thanksForContactingEmail.setAttribute("name", contact.getName());
         thanksForContactingEmail.setAttribute("logo", logo);
         return thanksForContactingEmail.toString();
     }
 
     public String contactNotification(Contact contact) {
+        contactNotification.reset();
         contactNotification.setAttribute("name", contact.getName());
         contactNotification.setAttribute("email", contact.getEmail());
         contactNotification.setAttribute("phone", contact.getPhone());
@@ -52,6 +54,7 @@ public class EmailFactory {
     }
 
     public String commentNotification(Comment comment) {
+        commentNotification.reset();
         commentNotification.setAttribute("name", comment.getContact().getName());
         commentNotification.setAttribute("message", comment.getContact().getMessage());
         commentNotification.setAttribute("product", productImage.replaceAll("\\{sku\\}", comment.getSku()));
