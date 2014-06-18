@@ -4,6 +4,5 @@
 <div class="error">
      Oops! Something went wrong; please try after sometime.
 </div>
-<%@ include file="footer.jsp" %>
 </body>
 </html>

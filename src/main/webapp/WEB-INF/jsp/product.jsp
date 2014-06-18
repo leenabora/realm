@@ -8,7 +8,7 @@
 <!--==============================content================================-->
 <input type="hidden" id="currentPage" value="products"/>
 
-<section id="content">
+<section id="wrapper">
     <div class="zerogrid top">
         <div class="row">
             <div class="col-full">
@@ -131,7 +131,6 @@
     </div>
 </section>
 <!--==============================footer=================================-->
-<%@ include file="footer.jsp" %>
 
 </div>
 </body>

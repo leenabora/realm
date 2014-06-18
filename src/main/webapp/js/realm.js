@@ -1,3 +1,4 @@
+/*
 $(document).ready(function () {
     changeTab()
 });
@@ -11,4 +12,5 @@ function changeTab() {
     currentPage = $('#currentPage').val()
     $('#' + currentPage).attr('class', "current")
 }
+*/
 

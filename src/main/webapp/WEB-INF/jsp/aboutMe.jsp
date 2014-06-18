@@ -2,7 +2,7 @@
 <!--==============================content================================-->
 <input type="hidden" id="currentPage" value="aboutMe"/>
 
-<section id="content">
+<section id="wrapper">
     <div class="zerogrid top">
         <div class="row">
             <div>
@@ -69,7 +69,6 @@
     </div>
 </section>
 <!--==============================footer=================================-->
-<%@ include file="footer.jsp" %>
 
 </body>
 </html>

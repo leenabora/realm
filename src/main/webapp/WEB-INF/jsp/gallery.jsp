@@ -1,16 +1,23 @@
 <%@ include file="header.jsp" %>
-<script src="<%=request.getContextPath()%>/js/gallerynew.js"></script>
+<!--<script src="<%=request.getContextPath()%>/js/gallerynew.js"></script>-->
 <input type="hidden" id="currentPage" value="gallery"/>
-<div id="content">
-    <div id="gallery-image-div1" class="gallery-image-div" >
-        <img id="gallery-image1" />
-    </div>
-    <div id="gallery-image-div2" class="gallery-image-div" >
-        <img id="gallery-image2" />
-    </div>
 
-
+<div class="wrapper">
+    <div class="gallery-table">
+        <div class="gallery-row">
+            <div class="promo-image-cell">
+                <img id="promo-image" src="<%=request.getContextPath()%>/images/sku-12-gallery.image"/>
+            </div>
+            <div class="promo-image-cell">
+                <div id="gallery-image-div1" >
+                    <img id="gallery-image1" src="<%=request.getContextPath()%>/images/sku-1-gallery.image"/>
+                </div>
+            </div>
+            <div class="promo-image-cell-corner">
+                <img id="promo-image2" src="<%=request.getContextPath()%>/images/sku-3-gallery.image"/>
+            </div>
+        </div>
+    </div>
 </div>
-<%@ include file="footer.jsp" %>
 </body>
 </html>

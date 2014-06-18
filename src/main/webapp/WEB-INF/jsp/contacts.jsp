@@ -11,7 +11,7 @@ pageEncoding="UTF-8" %>
 <!--==============================content================================-->
 <input type="hidden" id="currentPage" value="contacts"/>
 
-<section id="content">
+<section id="wrapper">
     <div class="zerogrid top">
         <div class="row">
             <div class="">
@@ -125,7 +125,6 @@ pageEncoding="UTF-8" %>
     </div>
 </section>
 <!--==============================footer=================================-->
-<%@ include file="footer.jsp" %>
 
 </body>
 </html>
