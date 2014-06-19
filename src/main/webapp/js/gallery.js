@@ -1,66 +1,27 @@
 $(document).ready(function () {
-   // loadGallery(true)
+    loadGallery()
 });
 
-function animate(){
 
+function loadGallery() {
+    randomProduct('promo-image1')
+    randomProduct('promo-image2')
+    randomProduct('promo-image3')
+
+    loadProduct()
+    setTimeout(shuffleGallery, 5000)
 }
 
-function loadGallery(firstTime) {
-    randomProduct();
-    if (firstTime) {
-        setTimeout(fontRefresh, 100);
-    }
-    else {
-        setTimeout(fontRefresh, 30);
-    }
-    setTimeout(loadGallery, 4000);
-}
+var currentProductImage
 
-function fontRefresh() {
-    $.getScript(getContextPath() + "/js/Bilbo_400.font.js", function () {
-        $('.text-1').each(function () {
-            $(this).html($(this).text());
-            var clone = $(this).clone();
-            $(this).replaceWith(clone);
-        });
-        $('.text-2').each(function () {
-            $(this).html($(this).text());
-            var clone = $(this).clone();
-            $(this).replaceWith(clone);
-        });
-        Cufon.replace('.text-1,.text-2', { fontFamily: 'Bilbo', hover: true});
-        Cufon.refresh();
-    });
-}
-
-function randomProduct() {
+function loadProduct(){
     $.ajax({
         type: 'GET',
+        cache: false,
+        async: false,
         url: getContextPath() + "/gallery/randomProduct.json",
         success: function (product, textStatus, request) {
-
-            animateGalleryImage()
-
-            var banner = $('#banner')
-            banner.empty()
-
-            var galleryHeading = product.galleryHeading + "<strong>" + product.gallerySubHeading + "</strong>";
-
-            var galleryHeading = $('<p>', {
-                class: 'text-1'
-            }).text(product.galleryHeading + "").appendTo(banner);
-
-
-            $('<strong>', {
-            }).text(product.gallerySubHeading + "").appendTo(galleryHeading);
-
-
-            $('<p>', {
-                class: 'text-2'
-            }).text(product.galleryDescription + "").appendTo(banner);
-
-            imageLoad(product);
+            currentProductImage = getContextPath() + "/images/" + product.sku + "-gallery.image"
         },
         error: function (request, textStatus, errorThrown) {
             alert(errorThrown);
@@ -68,27 +29,35 @@ function randomProduct() {
     });
 }
 
-function animateGalleryImage() {
-/*
-    var left = $('#galleryImageContainer').offset().left;  // Get the calculated left position
+function shuffleGallery() {
+    promo2 = $('#promo-image2').attr('src')
+    $('#promo-image3').attr('src', promo2)
 
-    $("#galleryImageContainer").css({left:left})  // Set the left to its calculated position
-        .animate({"left":"0px"}, "slow");
+    promo1 = $('#promo-image1').attr('src')
+    $('#promo-image2').attr('src', promo1)
 
-*/
+    $('#promo-image1').attr('src', currentProductImage)
 
-//    $("#galleryImageContainer").slideToggle(100);
+    setTimeout(shuffleGallery, 5000)
 
-    /* $("#galleryImage").animate({
-     width:'toggle'
-     }, 5000);*/
+    loadProduct()
 }
 
-function imageLoad(product) {
-    var imagePath = getContextPath() + "/images/" + product.sku + "-gallery.image"
-    $("#galleryImage").attr('src', imagePath);
+function randomProduct(galleryImage) {
+    $.ajax({
+        type: 'GET',
+        cache: false,
+        async: false,
+        url: getContextPath() + "/gallery/randomProduct.json?exclude=",
+        success: function (product, textStatus, request) {
+            var imagePath = getContextPath() + "/images/" + product.sku + "-gallery.image"
+            $("#" + galleryImage).attr('src', imagePath);
+        },
+        error: function (request, textStatus, errorThrown) {
+            alert(errorThrown);
+        }
+    });
 }
-
 
 function getContextPath() {
     return window.location.pathname.substring(0, window.location.pathname.indexOf("/", 2));

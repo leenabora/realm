@@ -2,12 +2,13 @@
 <!--==============================content================================-->
 <input type="hidden" id="currentPage" value="aboutMe"/>
 
-<section id="wrapper">
-    <div class="zerogrid top">
+<div class="wrapper">
+    <div class="wrapper-start">
         <div class="row">
-            <div>
-                <div>
+            <div class="col-2-3">
+                <div class="wrap-col">
                     <div class="box-5 right-1">
+
                         <img src="images/me.jpg" alt="" class="img-border fleft">
 
                         <p class="p2">
@@ -62,12 +63,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="clear"/>
-            </div>
         </div>
     </div>
-</section>
+</div>
 <!--==============================footer=================================-->
 
 </body>

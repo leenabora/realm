@@ -3,7 +3,9 @@
 <head>
     <title>Home</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" media="screen" href="<%=request.getContextPath()%>/css/realm.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="<%=request.getContextPath()%>/css/realm.css">
+
     <script src="<%=request.getContextPath()%>/js/jquery-1.7.min.js"></script>
     <script src="<%=request.getContextPath()%>/js/jquery.easing.1.3.js"></script>
     <script src="<%=request.getContextPath()%>/js/cufon-yui.js"></script>

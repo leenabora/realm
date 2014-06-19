@@ -11,119 +11,116 @@ pageEncoding="UTF-8" %>
 <!--==============================content================================-->
 <input type="hidden" id="currentPage" value="contacts"/>
 
-<section id="wrapper">
-    <div class="zerogrid top">
-        <div class="row">
-            <div class="">
+<div class="wrapper">
+    <div class="wrapper-start">
+        <div class="">
 
-                <div>
-                    <div class="wrap-col">
-                        <h2 class="align-center">Contact Form</h2>
+            <div>
+                <div class="wrap-col">
+                    <h2 class="align-center">Contact Form</h2>
 
-                        <div width="100%">
-                            <form:form action="${baseUrl}/contacts.htm" method="post" modelAttribute="contact"
-                                       id="form">
-                                <fieldset>
-                                    <table>
+                    <div width="100%">
+                        <form:form action="${baseUrl}/contacts.htm" method="post" modelAttribute="contact"
+                                   id="form">
+                            <fieldset>
+                                <table>
 
-                                        <tr>
-                                            <td>
-                                                <label class="contactLabel"> Name <strong>*</strong></label>
-                                            </td>
-                                            <td>
-                                                <form:input path="name" type="text"/>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <form:errors path="name" cssClass="error"/>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="contactLabel"> Name <strong>*</strong></label>
+                                        </td>
+                                        <td>
+                                            <form:input path="name" type="text"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <form:errors path="name" cssClass="error"/>
+                                        </td>
+                                    </tr>
 
-                                        <tr>
-                                            <td>
-                                                <label class="contactLabel"> Email <strong>*</strong></label>
-                                            </td>
-                                            <td>
-                                                <form:input path="email" type="text"/>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <form:errors path="email" cssClass="error"/>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="contactLabel"> Email <strong>*</strong></label>
+                                        </td>
+                                        <td>
+                                            <form:input path="email" type="text"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <form:errors path="email" cssClass="error"/>
+                                        </td>
+                                    </tr>
 
-                                        <tr>
-                                            <td>
-                                                <label class="contactLabel"> Phone <strong>*</strong></label>
-                                            </td>
-                                            <td>
-                                                <form:input path="phone" type="text"/>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <form:errors path="phone" cssClass="error"/>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="contactLabel"> Phone <strong>*</strong></label>
+                                        </td>
+                                        <td>
+                                            <form:input path="phone" type="text"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <form:errors path="phone" cssClass="error"/>
+                                        </td>
+                                    </tr>
 
-                                        <tr>
-                                            <td>
-                                                <label class="contactLabel"> Country <strong>*</strong></label>
-                                            </td>
-                                            <td>
-                                                <form:select path="country">
-                                                    <%@ include file="country.jsp" %>
-                                                </form:select>
+                                    <tr>
+                                        <td>
+                                            <label class="contactLabel"> Country <strong>*</strong></label>
+                                        </td>
+                                        <td>
+                                            <form:select path="country">
+                                                <%@ include file="country.jsp" %>
+                                            </form:select>
 
-                                            </td>
-                                        </tr>
-                                        <tr>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <form:errors path="country" cssClass="error"/>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <label class="contactLabel"> Message <strong>*</strong></label>
+                                        </td>
+                                        <td>
+                                            <form:textarea path="message" type="text"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <form:errors path="message" cssClass="error"/>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <div class="btns">
                                             <td>
-                                                <form:errors path="country" cssClass="error"/>
+                                                <a href="#" class="button" onclick="clear()">Clear</a>
                                             </td>
-                                        </tr>
 
-                                        <tr>
                                             <td>
-                                                <label class="contactLabel"> Message <strong>*</strong></label>
+                                                <a href="#" class="button"
+                                                   onClick="document.getElementById('form').submit()">Send</a>
                                             </td>
-                                            <td>
-                                                <form:textarea path="message" type="text"/>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <form:errors path="message" cssClass="error"/>
-                                            </td>
-                                        </tr>
+                                        </div>
+                                    </tr>
 
-
-                                        <tr>
-                                            <div class="btns">
-                                                <td>
-                                                    <a href="#" class="button" onclick="clear()">Clear</a>
-                                                </td>
-
-                                                <td>
-                                                    <a href="#" class="button"
-                                                       onClick="document.getElementById('form').submit()">Send</a>
-                                                </td>
-                                            </div>
-                                        </tr>
-
-                                    </table>
-                                </fieldset>
-                            </form:form>
-                        </div>
+                                </table>
+                            </fieldset>
+                        </form:form>
                     </div>
                 </div>
-                <div class="clear"></div>
             </div>
         </div>
     </div>
-</section>
+</div>
 <!--==============================footer=================================-->
 
 </body>
