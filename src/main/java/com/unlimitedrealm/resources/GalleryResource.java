@@ -21,9 +21,9 @@ public class GalleryResource {
     @Autowired
     ProductService productService;
 
-    @RequestMapping(value = "gallery.htm", method = GET)
+    @RequestMapping(value = "home.htm", method = GET)
     public String galleryPage(ModelMap model) {
-        return "gallery";
+        return "home";
     }
 
     @RequestMapping(value = "gallery/randomProduct.json", method = GET, produces = APPLICATION_JSON_VALUE)
