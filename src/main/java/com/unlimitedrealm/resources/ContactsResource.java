@@ -46,6 +46,6 @@ public class ContactsResource {
     private String contactPage(ModelMap model, HttpServletRequest request) {
         model.addAttribute("contact", new Contact());
         model.addAttribute("baseUrl", request.getContextPath());
-        return "contacts";
+        return "contact";
     }
 }
