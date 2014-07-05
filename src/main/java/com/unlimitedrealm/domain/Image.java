@@ -28,6 +28,34 @@ public class Image {
     }
 
 
+    @JsonIgnore
+    public InputStream getResizedContent() throws IOException {
+        BufferedImage originalImage = ImageIO.read(getMultipartFile().getInputStream());
+        int type = originalImage.getType() == 0 ? BufferedImage.TYPE_INT_ARGB : originalImage.getType();
+
+        return resizeImage(originalImage, type);
+    }
+
+    @JsonIgnore
+    public boolean isNewFileUpload() {
+        return multipartFile.getSize() != 0;
+    }
+
+    @JsonIgnore
+    private InputStream resizeImage(BufferedImage originalImage, int type) throws IOException {
+        double ratio = 1.0 * originalImage.getWidth() / originalImage.getHeight();
+        int newHeight = new Double(width / ratio).intValue();
+
+        BufferedImage resizedImage = new BufferedImage(width, newHeight, type);
+        Graphics2D g = resizedImage.createGraphics();
+        g.drawImage(originalImage, 0, 0, width, newHeight, null);
+        g.dispose();
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ImageIO.write(resizedImage, "jpg", baos);
+        return new ByteArrayInputStream(baos.toByteArray());
+    }
+
     public InputStream getContent() {
         return content;
     }
@@ -66,31 +94,6 @@ public class Image {
 
     public CommonsMultipartFile getMultipartFile() {
         return multipartFile;
-    }
-
-    @JsonIgnore
-    public InputStream getResizedContent() throws IOException {
-        BufferedImage originalImage = ImageIO.read(getMultipartFile().getInputStream());
-        int type = originalImage.getType() == 0 ? BufferedImage.TYPE_INT_ARGB : originalImage.getType();
-
-        return resizeImage(originalImage, type);
-    }
-
-    @JsonIgnore
-    public boolean isNewFileUpload() {
-        return multipartFile.getSize() != 0;
-    }
-
-    @JsonIgnore
-    private InputStream resizeImage(BufferedImage originalImage, int type) throws IOException {
-        BufferedImage resizedImage = new BufferedImage(width, height, type);
-        Graphics2D g = resizedImage.createGraphics();
-        g.drawImage(originalImage, 0, 0, width, height, null);
-        g.dispose();
-
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        ImageIO.write(resizedImage, "jpg", baos);
-        return new ByteArrayInputStream(baos.toByteArray());
     }
 
 }

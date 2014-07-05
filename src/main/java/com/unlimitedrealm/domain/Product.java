@@ -9,18 +9,24 @@ import java.io.IOException;
 public class Product {
     ObjectId _id;
     String sku;
+    String name;
     String description;
-    String galleryHeading;
-    String gallerySubHeading;
-    String galleryDescription;
-    String productDescription;
-    Image galleryImage;
-    Image productImage;
+    Boolean show;
+    Boolean resize;
+
+    boolean newArrival;
+    boolean showInHomePageNewArrivalSection;
+    boolean showInHomePageFeaturedProductSection;
+
+    Image listPageImage;
+    Image listPageHoverImage;
+    Image detailPageImage;
+    Image detailPageThumbnailImage;
+
     String statistics;
     String material;
-
-    Boolean show;
-
+    PatternType patternType;
+    Colors colors;
 
     public Product(Boolean show, String sku) {
         this.show = show;
@@ -30,44 +36,33 @@ public class Product {
     public Product() {
     }
 
-    public String getSku() {
-        return sku;
+    @JsonIgnore
+    public void clearMultiPartData() throws IOException {
+        listPageImage.setMultipartFile(null);
+        listPageHoverImage.setMultipartFile(null);
+        detailPageImage.setMultipartFile(null);
+        detailPageThumbnailImage.setMultipartFile(null);
     }
 
-    public void setSku(String sku) {
-        this.sku = sku;
+
+    @JsonIgnore
+    public boolean isNewListPageImage() {
+        return listPageImage.isNewFileUpload();
     }
 
-    public String getDescription() {
-        return description;
+    @JsonIgnore
+    public boolean isNewListPageHoverImage() {
+        return listPageHoverImage.isNewFileUpload();
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    @JsonIgnore
+    public boolean isNewDetailPageImage() {
+        return detailPageImage.isNewFileUpload();
     }
 
-    public String getGalleryHeading() {
-        return galleryHeading;
-    }
-
-    public void setGalleryHeading(String galleryHeading) {
-        this.galleryHeading = galleryHeading;
-    }
-
-    public String getGalleryDescription() {
-        return galleryDescription;
-    }
-
-    public void setGalleryDescription(String galleryDescription) {
-        this.galleryDescription = galleryDescription;
-    }
-
-    public String getProductDescription() {
-        return productDescription;
-    }
-
-    public void setProductDescription(String productDescription) {
-        this.productDescription = productDescription;
+    @JsonIgnore
+    public boolean isNewDetailPageThumbnailImage() {
+        return detailPageThumbnailImage.isNewFileUpload();
     }
 
     public ObjectId get_id() {
@@ -78,6 +73,30 @@ public class Product {
         this._id = _id;
     }
 
+    public String getSku() {
+        return sku;
+    }
+
+    public void setSku(String sku) {
+        this.sku = sku;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public Boolean getShow() {
         return show;
     }
@@ -86,28 +105,60 @@ public class Product {
         this.show = show;
     }
 
-    public Image getGalleryImage() {
-        return galleryImage;
+    public boolean isNewArrival() {
+        return newArrival;
     }
 
-    public void setGalleryImage(Image galleryImage) {
-        this.galleryImage = galleryImage;
+    public void setNewArrival(boolean newArrival) {
+        this.newArrival = newArrival;
     }
 
-    public Image getProductImage() {
-        return productImage;
+    public boolean isShowInHomePageNewArrivalSection() {
+        return showInHomePageNewArrivalSection;
     }
 
-    public void setProductImage(Image productImage) {
-        this.productImage = productImage;
+    public void setShowInHomePageNewArrivalSection(boolean showInHomePageNewArrivalSection) {
+        this.showInHomePageNewArrivalSection = showInHomePageNewArrivalSection;
     }
 
-    public String getGallerySubHeading() {
-        return gallerySubHeading;
+    public boolean isShowInHomePageFeaturedProductSection() {
+        return showInHomePageFeaturedProductSection;
     }
 
-    public void setGallerySubHeading(String gallerySubHeading) {
-        this.gallerySubHeading = gallerySubHeading;
+    public void setShowInHomePageFeaturedProductSection(boolean showInHomePageFeaturedProductSection) {
+        this.showInHomePageFeaturedProductSection = showInHomePageFeaturedProductSection;
+    }
+
+    public Image getListPageImage() {
+        return listPageImage;
+    }
+
+    public void setListPageImage(Image listPageImage) {
+        this.listPageImage = listPageImage;
+    }
+
+    public Image getListPageHoverImage() {
+        return listPageHoverImage;
+    }
+
+    public void setListPageHoverImage(Image listPageHoverImage) {
+        this.listPageHoverImage = listPageHoverImage;
+    }
+
+    public Image getDetailPageImage() {
+        return detailPageImage;
+    }
+
+    public void setDetailPageImage(Image detailPageImage) {
+        this.detailPageImage = detailPageImage;
+    }
+
+    public Image getDetailPageThumbnailImage() {
+        return detailPageThumbnailImage;
+    }
+
+    public void setDetailPageThumbnailImage(Image detailPageThumbnailImage) {
+        this.detailPageThumbnailImage = detailPageThumbnailImage;
     }
 
     public String getStatistics() {
@@ -126,20 +177,28 @@ public class Product {
         this.material = material;
     }
 
-    @JsonIgnore
-    public boolean isNewGalleryImageUpload() {
-        return galleryImage.isNewFileUpload();
+    public PatternType getPatternType() {
+        return patternType;
     }
 
-    @JsonIgnore
-    public boolean isNewProductImageUpload() {
-        return productImage.isNewFileUpload();
+    public void setPatternType(PatternType patternType) {
+        this.patternType = patternType;
     }
 
-    @JsonIgnore
-    public void clearMultiPartData() throws IOException {
-        galleryImage.setMultipartFile(null);
-        productImage.setMultipartFile(null);
+
+    public Boolean getResize() {
+        return resize;
     }
 
+    public void setResize(Boolean resize) {
+        this.resize = resize;
+    }
+
+    public Colors getColors() {
+        return colors;
+    }
+
+    public void setColors(Colors colors) {
+        this.colors = colors;
+    }
 }

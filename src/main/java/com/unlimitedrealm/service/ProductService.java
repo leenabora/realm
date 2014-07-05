@@ -24,20 +24,31 @@ public class ProductService {
             Product existingProduct = productRepository.find(product.getSku());
             if (existingProduct != null) {
                 product.set_id(existingProduct.get_id());
-                if (product.isNewGalleryImageUpload()) {
-                    imageRepository.deleteImage(product.getSku() + "-gallery");
+                if (product.isNewListPageImage()) {
+                    imageRepository.deleteImage(product.getSku() + "-list");
                 }
-                if (product.isNewProductImageUpload()) {
-                    imageRepository.deleteImage(product.getSku() + "-product");
+                if (product.isNewListPageHoverImage()) {
+                    imageRepository.deleteImage(product.getSku() + "-list-hover");
+                }
+                if (product.isNewDetailPageImage()) {
+                    imageRepository.deleteImage(product.getSku() + "-detail");
+                }
+                if (product.isNewDetailPageThumbnailImage()) {
+                    imageRepository.deleteImage(product.getSku() + "-detail-thumbnail");
                 }
             }
 
-            if (product.isNewGalleryImageUpload()) {
-                imageRepository.saveImage(product.getGalleryImage(), product.getSku() + "-gallery");
+            if (product.isNewListPageImage()) {
+                imageRepository.saveImage(product.getListPageImage(), product.getSku() + "-list", product.getResize());
             }
-
-            if (product.isNewProductImageUpload()) {
-                imageRepository.saveImage(product.getProductImage(), product.getSku() + "-product");
+            if (product.isNewListPageHoverImage()) {
+                imageRepository.saveImage(product.getListPageHoverImage(), product.getSku() + "-list-hover", product.getResize());
+            }
+            if (product.isNewDetailPageImage()) {
+                imageRepository.saveImage(product.getDetailPageImage(), product.getSku() + "-detail", product.getResize());
+            }
+            if (product.isNewDetailPageThumbnailImage()) {
+                imageRepository.saveImage(product.getListPageHoverImage(), product.getSku() + "-detail-thumbnail", product.getResize());
             }
 
             product.clearMultiPartData();
@@ -73,10 +84,10 @@ public class ProductService {
         return imageRepository.findImage(fileName);
     }
 
-    public Product findRandomGalleryImage() {
+   /* public Product findRandomGalleryImage() {
         Product randomProduct = productRepository.findRandom();
         randomProduct.setGalleryImage(imageRepository.findImage(randomProduct.getSku() + "-gallery"));
         return randomProduct;
-    }
+    }*/
 
 }

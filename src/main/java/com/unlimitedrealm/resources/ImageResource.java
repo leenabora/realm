@@ -42,7 +42,7 @@ public class ImageResource {
         }
     }
 
-    @RequestMapping(value = "gallery.image", method = GET)
+   /* @RequestMapping(value = "gallery.image", method = GET)
     @ResponseBody
     public HttpEntity<byte[]> fetchRandomGalleryImage() {
         try {
@@ -59,7 +59,7 @@ public class ImageResource {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
+    }*/
 
 
 }
