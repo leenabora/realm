@@ -308,7 +308,7 @@ pageEncoding="UTF-8" %>
 <br/>
 
 <div class="divRow">
-    <div class="divCellOuter" colspan="2" align="center"><input type="submit" value="Add Product"/></div>
+    <div class="divCellOuter" colspan="2" align="center"><input type="submit" value="Save Product"/></div>
 </div>
 
 

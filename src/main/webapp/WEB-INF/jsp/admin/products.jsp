@@ -9,7 +9,7 @@
 </head>
 
 <h1>
-    Products :
+    Collection:
 </h1>
 
 <body>
@@ -35,13 +35,13 @@
                         <div class="divRow">
 
                             <div class="divCell">
-                                <img src="<%=request.getContextPath()%>/images/<%= products.get(i).getSku() %>-product.image"/>
+                                <img src="<%=request.getContextPath()%>/images/<%= products.get(i).getSku() %>-list.image"/>
                             </div>
                         </div>
                         <div class="divRow">
 
                             <div class="divCellInner">
-                                <%= products.get(i).getProductDescription()%>
+                                <%= products.get(i).getName()%>
                             </div>
                         </div>
                         <div class="divRow">

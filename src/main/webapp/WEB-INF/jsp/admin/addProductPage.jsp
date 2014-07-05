@@ -111,13 +111,13 @@ pageEncoding="UTF-8" %>
             <div class="divRow">
                 <div class="divCellOuter">Width</div>
                 <div class="divCellOuter">
-                    <form:input path="listPageImage.width" value="360"/>
+                    <form:input path="listPageImage.width" value="285"/>
                 </div>
             </div>
             <div class="divRow">
                 <div class="divCellOuter">Height</div>
                 <div class="divCellOuter">
-                    <form:input path="listPageImage.height" value="527"/>
+                    <form:input path="listPageImage.height" value="380"/>
                 </div>
             </div>
         </div>
@@ -137,13 +137,13 @@ pageEncoding="UTF-8" %>
             <div class="divRow">
                 <div class="divCellOuter">Width</div>
                 <div class="divCellOuter">
-                    <form:input path="listPageHoverImage.width" value="360"/>
+                    <form:input path="listPageHoverImage.width" value="285"/>
                 </div>
             </div>
             <div class="divRow">
                 <div class="divCellOuter">Height</div>
                 <div class="divCellOuter">
-                    <form:input path="listPageHoverImage.height" value="527"/>
+                    <form:input path="listPageHoverImage.height" value="380"/>
                 </div>
             </div>
         </div>
@@ -163,13 +163,13 @@ pageEncoding="UTF-8" %>
             <div class="divRow">
                 <div class="divCellOuter">Width</div>
                 <div class="divCellOuter">
-                    <form:input path="detailPageImage.width" value="360"/>
+                    <form:input path="detailPageImage.width" value="1000"/>
                 </div>
             </div>
             <div class="divRow">
                 <div class="divCellOuter">Height</div>
                 <div class="divCellOuter">
-                    <form:input path="detailPageImage.height" value="527"/>
+                    <form:input path="detailPageImage.height" value="1252"/>
                 </div>
             </div>
         </div>

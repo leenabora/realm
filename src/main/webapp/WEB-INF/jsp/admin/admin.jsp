@@ -6,7 +6,7 @@
 
 <br/>
 <br/>
-<a href="<%=request.getContextPath()%>/gallery.htm">Main Site</a>
+<a href="<%=request.getContextPath()%>/home.htm">Main Site</a>
 <br/>
 <br/>
 <a href="<%=request.getContextPath()%>/admin/products.htm">View Products</a>
