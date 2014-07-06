@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template -->
     <link href="<%=request.getContextPath()%>/assets/css/style.css" rel="stylesheet">
+    <link href="<%=request.getContextPath()%>/assets/css/realm.css" rel="stylesheet">
 
     <!-- styles needed by minimalect -->
     <link href="<%=request.getContextPath()%>/assets/css/jquery.minimalect.min.css" rel="stylesheet">

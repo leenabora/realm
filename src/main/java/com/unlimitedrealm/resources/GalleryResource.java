@@ -23,6 +23,7 @@ public class GalleryResource {
 
     @RequestMapping(value = "home.htm", method = GET)
     public String galleryPage(ModelMap model) {
+        model.addAttribute("page", "home");
         return "home";
     }
 

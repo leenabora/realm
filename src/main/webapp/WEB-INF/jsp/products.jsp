@@ -9,6 +9,8 @@
 
 <div class="container main-container headerOffset">
 
+ <input type="hidden" id="patternType" value='<c:out value="${patternType}"/>' />
+
 <!-- Main component call to action -->
 
 <div class="row">
@@ -30,17 +32,17 @@
             <div id="collapseCategory" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <ul class="nav nav-pills nav-stacked tree">
-                        <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a" href="<%=request.getContextPath()%>/products/all.htm" > <span class="badge pull-right"><%=products.size() %></span> WOMEN COLLECTION </a>
+                        <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a"     id="all"     href="<%=request.getContextPath()%>/products/all.htm" > WOMEN COLLECTION </a>
                             <ul class="category-level-2 dropdown-menu-tree">
-                                <li class="dropdown-tree open-tree"> <a class="dropdown-tree-a"  href="<%=request.getContextPath()%>/products/type/Lehenga:Salwar_Suit.htm"> Indian Ethnic Wear</a>
-                                <li><a href="<%=request.getContextPath()%>/products/type/Lehenga.htm" >Lehenga</a> </li>
-                                <li><a href="<%=request.getContextPath()%>/products/type/Salwar_Suit.htm" >Salwar Suits</a> </li>
+                                <li class="dropdown-tree open-tree"> <a class="dropdown-tree-a"     id="IndianWear"    href="<%=request.getContextPath()%>/products/type/IndianWear.htm"> Indian Ethnic Wear</a>
+                                <li><a href="<%=request.getContextPath()%>/products/type/Lehenga.htm" id="Lehenga"  >Lehenga</a> </li>
+                                <li><a href="<%=request.getContextPath()%>/products/type/Salwar_Suit.htm  id="Salwar_Suit" >Salwar Suits</a> </li>
                         </li>
                     </ul>
                     <ul class="category-level-2 dropdown-menu-tree">
-                        <li class="dropdown-tree open-tree"> <a class="dropdown-tree-a"  href="<%=request.getContextPath()%>/products/type/Midi:Skirt.htm">Western Wear</a>
-                        <li><a href="<%=request.getContextPath()%>/products/type/Midi.htm" >Midi</a> </li>
-                        <li><a href="<%=request.getContextPath()%>/products/type/Skirt.htm" >Skirt</a> </li>
+                        <li class="dropdown-tree open-tree"> <a class="dropdown-tree-a"    id="WesternWear"  href="<%=request.getContextPath()%>/products/type/WesternWear.htm">Western Wear</a>
+                        <li><a href="<%=request.getContextPath()%>/products/type/Midi.htm"  id="Midi" >Midi</a> </li>
+                        <li><a href="<%=request.getContextPath()%>/products/type/Skirt.htm"  id="Skirt">Skirt</a> </li>
                         </li>
                     </ul>
                     </li>
@@ -146,8 +148,8 @@
     <p class="pull-left"> Showing <strong><%=products.size() %></strong> products </p>
     <div class="pull-right ">
         <div class="change-view pull-right">
-            <a href="#" title="Grid" class="grid-view"> <i class="fa fa-th-large"></i> </a>
-            <a href="#" title="List" class="list-view "><i class="fa fa-th-list"></i></a> </div>
+            <a href="#" title="Grid" class="grid-view"> <i class="fa fa-th-large" id="gridView" onclick="gridView('gridView')"></i> </a>
+            <a href="#" title="List" class="list-view "><i class="fa fa-th-list" id="listView" onclick="gridView('listView')"></i></a> </div>
     </div>
 </div> <!--/.productFilter-->
 
@@ -196,3 +198,5 @@
 <div class="gap"> </div>
 
 <%@ include file="footer.jsp" %>
+    <script src="<%=request.getContextPath()%>/assets/js/collection.js"></script>
+

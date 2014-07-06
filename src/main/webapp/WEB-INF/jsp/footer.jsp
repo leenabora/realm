@@ -1,4 +1,3 @@
-
 <footer>
     <div class="footer">
         <div class="container">
@@ -22,7 +21,7 @@
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
                     <h3> Shop </h3>
                     <ul>
-                        <li> <a href="index.html"> Home </a> </li>
+                        <li><a href="index.html"> Home </a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
@@ -66,7 +65,7 @@
                     <ul>
                         <li>
                             <div class="input-append newsLatterBox text-center">
-                                <input type="text" class="full text-center"  placeholder="Email ">
+                                <input type="text" class="full text-center" placeholder="Email ">
                                 <button class="btn  bg-gray" type="button">
                                     Subscribe
                                     <i class="fa fa-long-arrow-right">
@@ -122,20 +121,25 @@
             <p class="pull-left">
                 &copy; TSHOP 2014. All right reserved.
             </p>
+
             <div class="pull-right paymentMethodImg">
 
-                <img height="30" class="pull-right" src="<%=request.getContextPath()%>/images/site/payment/master_card.png" alt="img" >
-                <img height="30" class="pull-right" src="<%=request.getContextPath()%>/images/site/payment/paypal.png" alt="img" >
-                <img height="30" class="pull-right" src="<%=request.getContextPath()%>/images/site/payment/american_express_card.png" alt="img" >
-                <img  height="30" class="pull-right" src="<%=request.getContextPath()%>/images/site/payment/discover_network_card.png" alt="img" >
-                <img  height="30" class="pull-right" src="<%=request.getContextPath()%>/images/site/payment/google_wallet.png" alt="img" >
+                <img height="30" class="pull-right"
+                     src="<%=request.getContextPath()%>/images/site/payment/master_card.png" alt="img">
+                <img height="30" class="pull-right" src="<%=request.getContextPath()%>/images/site/payment/paypal.png"
+                     alt="img">
+                <img height="30" class="pull-right"
+                     src="<%=request.getContextPath()%>/images/site/payment/american_express_card.png" alt="img">
+                <img height="30" class="pull-right"
+                     src="<%=request.getContextPath()%>/images/site/payment/discover_network_card.png" alt="img">
+                <img height="30" class="pull-right"
+                     src="<%=request.getContextPath()%>/images/site/payment/google_wallet.png" alt="img">
             </div>
 
 
         </div>
     </div>
 </footer>
-
 
 
 <!-- Le javascript
@@ -146,17 +150,19 @@
 <script src="<%=request.getContextPath()%>/assets/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- include  parallax plugin -->
-<script type="text/javascript"  src="<%=request.getContextPath()%>/assets/js/jquery.parallax-1.1.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/jquery.parallax-1.1.js"></script>
 
 <!-- optionally include helper plugins -->
-<script type="text/javascript"  src="<%=request.getContextPath()%>/assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
+<script type="text/javascript"
+        src="<%=request.getContextPath()%>/assets/js/helper-plugins/jquery.mousewheel.min.js"></script>
 
 <!-- include mCustomScrollbar plugin //Custom Scrollbar  -->
 
 <script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/jquery.mCustomScrollbar.js"></script>
 
 <!-- include checkRadio plugin //Custom check & Radio  -->
-<script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/ion-checkRadio/ion.checkRadio.min.js"></script>
+<script type="text/javascript"
+        src="<%=request.getContextPath()%>/assets/js/ion-checkRadio/ion.checkRadio.min.js"></script>
 
 <!-- include grid.js // for equal Div height  -->
 <script src="<%=request.getContextPath()%>/assets/js/grids.js"></script>
@@ -173,9 +179,16 @@
 <!-- include custom script for site  -->
 <script src="<%=request.getContextPath()%>/assets/js/script.js"></script>
 
+<c:if test="${page}.equals('home')">
+    <!-- include custom script for only homepage  -->
+    <script src="<%=request.getContextPath()%>/assets/js/home.js"></script>
+</c:if>
 
-<!-- include custom script for only homepage  -->
-<script src="<%=request.getContextPath()%>/assets/js/home.js"></script>
+<c:if test="${page}.equals('collection')">
+    <!-- include custom script for only homepage  -->
+    <script src="<%=request.getContextPath()%>/assets/js/collection.js"></script>
+</c:if>
+
 <script src="<%=request.getContextPath()%>/assets/js/realm.js"></script>
 
 

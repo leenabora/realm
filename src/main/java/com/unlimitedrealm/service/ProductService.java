@@ -72,7 +72,8 @@ public class ProductService {
         return productRepository.findAllVisible();
     }
 
-    public List<Product> findAllVisibleByType(String types) {
+    public List<Product> findAllVisibleByType(String type) {
+        String types = type.equals("IndianWear") ? "Lehenga:Salwar_Suit" : type.equals("WesternWear") ? "Midi:Skirt" : type;
         return productRepository.findAllVisibleByType(types.split(":"));
     }
 

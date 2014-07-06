@@ -29,14 +29,18 @@ public class ProductResource {
         List<Product> products = productService.findAllVisible();
         model.addAttribute("products", products);
         model.addAttribute("baseUrl", request.getContextPath());
+        model.addAttribute("patternType", "all");
+        model.addAttribute("page", "collection");
         return "products";
     }
 
-    @RequestMapping(value = "type/{types}.htm", method = GET)
-    public String productsByType(@PathVariable String types, ModelMap model, HttpServletRequest request) {
-        List<Product> products = productService.findAllVisibleByType(types);
+    @RequestMapping(value = "type/{type}.htm", method = GET)
+    public String productsByType(@PathVariable String type, ModelMap model, HttpServletRequest request) {
+        List<Product> products = productService.findAllVisibleByType(type);
         model.addAttribute("products", products);
         model.addAttribute("baseUrl", request.getContextPath());
+        model.addAttribute("patternType", type);
+        model.addAttribute("page", "collection");
         return "products";
     }
 
@@ -49,7 +53,7 @@ public class ProductResource {
         for (String color : colorArray) {
             model.addAttribute(color, true);
         }
-
+        model.addAttribute("page", "collection");
         model.addAttribute("baseUrl", request.getContextPath());
 
         return "products";
