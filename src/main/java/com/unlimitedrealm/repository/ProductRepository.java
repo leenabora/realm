@@ -1,6 +1,7 @@
 package com.unlimitedrealm.repository;
 
 import com.mongodb.BasicDBObject;
+import com.unlimitedrealm.domain.PatternType;
 import com.unlimitedrealm.domain.Product;
 import com.unlimitedrealm.domain.Sku;
 import org.mongojack.DBCursor;
@@ -10,7 +11,9 @@ import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class ProductRepository {
@@ -65,6 +68,21 @@ public class ProductRepository {
         return buildProductList(productCursor);
     }
 
+    public List<Product> findAllVisible(PatternType patternType) {
+        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("patternType", patternType.toString()));
+        return buildProductList(productCursor);
+    }
+
+    public List<Product> findAllVisible(String[] colors) {
+        Map<String, Boolean> colorMap = new HashMap<>();
+        for (String color : colors) {
+            colorMap.put(color, true);
+        }
+
+        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject(colorMap));
+        return buildProductList(productCursor);
+    }
+
     private List<Product> buildProductList(DBCursor<Product> productCursor) {
         List<Product> products = new ArrayList<>();
 
@@ -74,6 +92,4 @@ public class ProductRepository {
         }
         return products;
     }
-
-
 }

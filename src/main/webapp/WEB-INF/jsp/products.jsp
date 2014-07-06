@@ -3,6 +3,10 @@
 <%@ page import="com.unlimitedrealm.domain.Product" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+
+<% List   <Product> products =( List<Product>) request.getAttribute("products"); %>
+
+
 <div class="container main-container headerOffset">
 
 <!-- Main component call to action -->
@@ -26,17 +30,17 @@
             <div id="collapseCategory" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <ul class="nav nav-pills nav-stacked tree">
-                        <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a" > <span class="badge pull-right">42</span> WOMEN COLLECTION </a>
+                        <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a" href="<%=request.getContextPath()%>/products/all.htm" > <span class="badge pull-right"><%=products.size() %></span> WOMEN COLLECTION </a>
                             <ul class="category-level-2 dropdown-menu-tree">
                                 <li class="dropdown-tree open-tree"> <a class="dropdown-tree-a"  href="#"> Indian Ethnic Wear</a>
-                                <li><a href="sub-category.html">Lehenga</a> </li>
-                                <li><a href="sub-category.html">Salwar Suits</a> </li>
+                                <li><a href="<%=request.getContextPath()%>/products/type/Lehenga.htm" >Lehenga</a> </li>
+                                <li><a href="<%=request.getContextPath()%>/products/type/Salwar_Suit.htm" >Salwar Suits</a> </li>
                         </li>
                     </ul>
                     <ul class="category-level-2 dropdown-menu-tree">
                         <li class="dropdown-tree open-tree"> <a class="dropdown-tree-a"  href="#">Western Wear</a>
-                        <li><a href="sub-category.html">Midi</a> </li>
-                        <li><a href="sub-category.html">Skirt</a> </li>
+                        <li><a href="<%=request.getContextPath()%>/products/type/Midi.htm" >Midi</a> </li>
+                        <li><a href="<%=request.getContextPath()%>/products/type/Skirt.htm" >Skirt</a> </li>
                         </li>
                     </ul>
                     </li>
@@ -54,83 +58,73 @@
                 <div class="panel-body smoothscroll maxheight300 color-filter">
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="0"  />
-                            <small style="background-color:#333333"></small> Black <span >(123)</span> </label>
+                            <input type="checkbox" id="blackColor" value="0" onclick="colorBoxEvent()"  />
+                            <small style="background-color:#333333"></small> Black </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="1" />
-                            <small style="background-color:#1664c4"></small> Blue (434) </label>
+                            <input type="checkbox" id="blueColor" value="1" onclick="colorBoxEvent()"  />
+                            <small style="background-color:#1664c4"></small> Blue  </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="2" />
-                            <small style="background-color:#c00707"></small> Red (338) </label>
+                            <input type="checkbox" id="redColor" value="2" onclick="colorBoxEvent()"  />
+                            <small style="background-color:#c00707"></small> Red </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="3" />
-                            <small style="background-color:#6fcc14"></small> Green (253) </label>
+                            <input type="checkbox" id="greenColor" value="3" onclick="colorBoxEvent()"  />
+                            <small style="background-color:#6fcc14"></small> Green  </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="3" />
-                            <small style="background-color:#943f00"></small> Brown (240) </label>
+                            <input type="checkbox" id="brownColor" value="3" onclick="colorBoxEvent()"  />
+                            <small style="background-color:#943f00"></small> Brown  </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="3" />
-                            <small style="background-color:#ff1cae"></small> Pink (212) </label>
+                            <input type="checkbox" id="pinkColor" value="3" onclick="colorBoxEvent()"  />
+                            <small style="background-color:#ff1cae"></small> Pink  </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="3" />
-                            <small style="background-color:#f5f5dc"></small> Beige (176) </label>
+                            <input type="checkbox" id="greyColor" value="3" onclick="colorBoxEvent()"  />
+                            <small style="background-color:#adadad"></small> Grey </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="3" />
-                            <small style="background-color:#adadad"></small> Grey (154) </label>
+                            <input type="checkbox" id="purpleColor" value="3" onclick="colorBoxEvent()"  />
+                            <small style="background-color:#5d00dc"></small> Purple </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="3" />
-                            <small style="background-color:#5d00dc"></small> Purple (132) </label>
+                            <input type="checkbox" id="yellowColor" value="3" onclick="colorBoxEvent()"  />
+                            <small style="background-color:#f1f40e"></small> Yellow</label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="3" />
-                            <small style="background-color:#f1f40e"></small> Yellow (104) </label>
+                            <input type="checkbox" id="orangeColor" value="3" onclick="colorBoxEvent()"  />
+                            <small style="background-color:#ffc600"></small> Orange </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="3" />
-                            <small style="background-color:#ffc600"></small> Orange (77) </label>
+                            <input type="checkbox" id="maroonColor" value="3" onclick="colorBoxEvent()"  />
+                            <small style="background-color:#9b1d00"></small> Maroon  </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="3" />
-                            <small style="background-color:#9b1d00"></small> Maroon (76) </label>
+                            <input type="checkbox" id="silverColor" value="3" onclick="colorBoxEvent()"  />
+                            <small style="background-color:#ecf1ef"></small> Silver </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="3" />
-                            <small style="background-color:#0a43a3"></small> Navy Blue (68) </label>
+                            <input type="checkbox" id="goldenColor" value="3" onclick="colorBoxEvent()"  />
+                            <small style="background-color:gold"></small>Golden </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" name="tour" value="3" />
-                            <small style="background-color:#ede4b2"></small> Tan (67) </label>
-                    </div>
-                    <div class="block-element">
-                        <label>
-                            <input type="checkbox" name="tour" value="3" />
-                            <small style="background-color:#ecf1ef"></small> Silver (49) </label>
-                    </div>
-                    <div class="block-element">
-                        <label>
-                            <input type="checkbox" name="tour" value="3" />
-                            <small style="background-color:#f3f1e7"></small> Off White (44) </label>
+                            <input type="checkbox" id="whiteColor" value="3" onclick="colorBoxEvent()"  />
+                            <small style="background-color:#ffffff"></small>White </label>
                     </div>
                     <div class="block-element">
                         <label> &nbsp; </label>
@@ -149,7 +143,7 @@
 
 
 <div class="w100 productFilter clearfix">
-    <p class="pull-left"> Showing <strong>12</strong> products </p>
+    <p class="pull-left"> Showing <strong><%=products.size() %></strong> products </p>
     <div class="pull-right ">
         <div class="change-view pull-right">
             <a href="#" title="Grid" class="grid-view"> <i class="fa fa-th-large"></i> </a>
@@ -159,11 +153,7 @@
 
 <div class="row  categoryProduct xsResponse clearfix">
 
-    <%
-    List   <Product> products =( List<Product>) request.getAttribute("products");
-            for (int i = 0; i < products.size(); i++) {
-            %>
-
+    <%  for (int i = 0; i < products.size(); i++) {            %>
 
             <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6 ">
     <div class="product">

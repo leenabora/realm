@@ -1,6 +1,7 @@
 package com.unlimitedrealm.resources;
 
 import com.unlimitedrealm.domain.Comment;
+import com.unlimitedrealm.domain.PatternType;
 import com.unlimitedrealm.domain.Product;
 import com.unlimitedrealm.service.CommentService;
 import com.unlimitedrealm.service.ProductService;
@@ -27,6 +28,22 @@ public class ProductResource {
     @RequestMapping(value = "all.htm", method = GET)
     public String products(ModelMap model, HttpServletRequest request) {
         List<Product> products = productService.findAllVisible();
+        model.addAttribute("products", products);
+        model.addAttribute("baseUrl", request.getContextPath());
+        return "products";
+    }
+
+    @RequestMapping(value = "type/{type}.htm", method = GET)
+    public String productsByType(@PathVariable PatternType type, ModelMap model, HttpServletRequest request) {
+        List<Product> products = productService.findAllVisible(type);
+        model.addAttribute("products", products);
+        model.addAttribute("baseUrl", request.getContextPath());
+        return "products";
+    }
+
+    @RequestMapping(value = "colors/{colors}.htm", method = GET)
+    public String productsByColors(@PathVariable String colors, ModelMap model, HttpServletRequest request) {
+        List<Product> products = productService.findAllVisible(colors);
         model.addAttribute("products", products);
         model.addAttribute("baseUrl", request.getContextPath());
         return "products";

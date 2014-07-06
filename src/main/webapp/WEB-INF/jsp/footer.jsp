@@ -176,6 +176,7 @@
 
 <!-- include custom script for only homepage  -->
 <script src="<%=request.getContextPath()%>/assets/js/home.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/realm.js"></script>
 
 
 <!-- include jqueryCycle plugin -->
