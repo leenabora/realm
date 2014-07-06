@@ -32,20 +32,23 @@
             <div id="collapseCategory" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <ul class="nav nav-pills nav-stacked tree">
-                        <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a"     id="all"     href="<%=request.getContextPath()%>/products/all.htm" > WOMEN COLLECTION </a>
+                        <li class="active dropdown-tree open-tree" > <a  class="dropdown-tree-a" id="all" href="<%=request.getContextPath()%>/products/all.htm">  WOMEN COLLECTION </a>
                             <ul class="category-level-2 dropdown-menu-tree">
-                                <li class="dropdown-tree open-tree"> <a class="dropdown-tree-a"     id="IndianWear"    href="<%=request.getContextPath()%>/products/type/IndianWear.htm"> Indian Ethnic Wear</a>
-                                <li><a href="<%=request.getContextPath()%>/products/type/Lehenga.htm" id="Lehenga"  >Lehenga</a> </li>
-                                <li><a href="<%=request.getContextPath()%>/products/type/Salwar_Suit.htm  id="Salwar_Suit" >Salwar Suits</a> </li>
+                                <li class="dropdown-tree open-tree"> <a class="dropdown-tree-a"  id="IndianWear" href="<%=request.getContextPath()%>/products/type/IndianWear.htm"> Indian Ethnic Wear</a>
+                                    <ul class="category-level-2 dropdown-menu-tree">
+                                        <li><a  id="Lehenga" href="<%=request.getContextPath()%>/products/type/Lehenga.htm">Lehenga</a> </li>
+                                        <li><a id="Salwar_Suit" href="<%=request.getContextPath()%>/products/type/Salwar_Suit.htm">Salwar Suit</a> </li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown-tree open-tree"> <a class="dropdown-tree-a" id="WesternWear"  href="<%=request.getContextPath()%>/products/type/WesternWear.htm">Western Wear</a>
+                                    <ul class="category-level-2 dropdown-menu-tree">
+                                        <li><a href="<%=request.getContextPath()%>/products/type/Midi.htm"  id="Midi">Midi</a> </li>
+                                        <li><a href="<%=request.getContextPath()%>/products/type/Skirt.htm"  id="Skirt">Skirt</a> </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
-                    </ul>
-                    <ul class="category-level-2 dropdown-menu-tree">
-                        <li class="dropdown-tree open-tree"> <a class="dropdown-tree-a"    id="WesternWear"  href="<%=request.getContextPath()%>/products/type/WesternWear.htm">Western Wear</a>
-                        <li><a href="<%=request.getContextPath()%>/products/type/Midi.htm"  id="Midi" >Midi</a> </li>
-                        <li><a href="<%=request.getContextPath()%>/products/type/Skirt.htm"  id="Skirt">Skirt</a> </li>
-                        </li>
-                    </ul>
-                    </li>
                     </ul>
                 </div>
             </div>
@@ -198,5 +201,5 @@
 <div class="gap"> </div>
 
 <%@ include file="footer.jsp" %>
-    <script src="<%=request.getContextPath()%>/assets/js/collection.js"></script>
 
+<script src="<%=request.getContextPath()%>/assets/js/collection.js"></script>

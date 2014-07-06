@@ -1,8 +1,6 @@
 $(document).ready(function () {
     selectType()
-    gridView('gridView' +
-        '' +
-        '')
+    gridView('gridView')
 });
 
 function colorBoxEvent() {
