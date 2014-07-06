@@ -1,7 +1,6 @@
 package com.unlimitedrealm.repository;
 
 import com.mongodb.BasicDBObject;
-import com.unlimitedrealm.domain.PatternType;
 import com.unlimitedrealm.domain.Product;
 import com.unlimitedrealm.domain.Sku;
 import org.mongojack.DBCursor;
@@ -11,9 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Repository
 public class ProductRepository {
@@ -68,18 +65,25 @@ public class ProductRepository {
         return buildProductList(productCursor);
     }
 
-    public List<Product> findAllVisible(PatternType patternType) {
-        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("patternType", patternType.toString()));
-        return buildProductList(productCursor);
-    }
-
-    public List<Product> findAllVisible(String[] colors) {
-        Map<String, Boolean> colorMap = new HashMap<>();
+    public List<Product> findAllVisibleByColors(String[] colors) {
+        ArrayList orList = new ArrayList();
         for (String color : colors) {
-            colorMap.put(color, true);
+            orList.add(new BasicDBObject("colors." + color, true));
         }
 
-        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject(colorMap));
+        return executeOrQuery(orList);
+    }
+
+    public List<Product> findAllVisibleByType(String[] types) {
+        ArrayList orList = new ArrayList();
+        for (String type : types) {
+            orList.add(new BasicDBObject("patternType", type));
+        }
+        return executeOrQuery(orList);
+    }
+
+    private List<Product> executeOrQuery(ArrayList orList) {
+        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("$or", orList));
         return buildProductList(productCursor);
     }
 

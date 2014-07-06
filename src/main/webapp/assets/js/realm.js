@@ -1,46 +1,46 @@
 function colorBoxEvent() {
 
     var colorQuery = ""
-    if ($('#blackColor').attr('checked')) {
+    if ($('#black').attr('checked')) {
         colorQuery = colorQuery + "black:"
     }
-    if ($('#blueColor').attr('checked')) {
+    if ($('#blue').attr('checked')) {
         colorQuery = colorQuery + "blue:"
     }
-    if ($('#redColor').attr('checked')) {
+    if ($('#red').attr('checked')) {
         colorQuery = colorQuery + "red:"
     }
-    if ($('#greenColor').attr('checked')) {
+    if ($('#green').attr('checked')) {
         colorQuery = colorQuery + "green:"
     }
-    if ($('#brownColor').attr('checked')) {
+    if ($('#brown').attr('checked')) {
         colorQuery = colorQuery + "brown:"
     }
-    if ($('#pinkColor').attr('checked')) {
+    if ($('#pink').attr('checked')) {
         colorQuery = colorQuery + "pink:"
     }
-    if ($('#greyColor').attr('checked')) {
+    if ($('#grey').attr('checked')) {
         colorQuery = colorQuery + "grey:"
     }
-    if ($('#purpleColor').attr('checked')) {
+    if ($('#purple').attr('checked')) {
         colorQuery = colorQuery + "purple:"
     }
-    if ($('#yellowColor').attr('checked')) {
+    if ($('#yellow').attr('checked')) {
         colorQuery = colorQuery + "yellow:"
     }
-    if ($('#orangeColor').attr('checked')) {
+    if ($('#orange').attr('checked')) {
         colorQuery = colorQuery + "orange:"
     }
-    if ($('#maroonColor').attr('checked')) {
+    if ($('#maroon').attr('checked')) {
         colorQuery = colorQuery + "maroon:"
     }
-    if ($('#silverColor').attr('checked')) {
+    if ($('#silver').attr('checked')) {
         colorQuery = colorQuery + "silver:"
     }
-    if ($('#goldenColor').attr('checked')) {
+    if ($('#golden').attr('checked')) {
         colorQuery = colorQuery + "golden:"
     }
-    if ($('#whiteColor').attr('checked')) {
+    if ($('#white').attr('checked')) {
         colorQuery = colorQuery + "white:"
     }
 
@@ -49,7 +49,7 @@ function colorBoxEvent() {
 
     }
     else {
-        window.location.href = contextPath() + "/products/colors/"+colorQuery.slice(0,-1)+".htm"
+        window.location.href = contextPath() + "/products/colors/" + colorQuery.slice(0, -1) + ".htm"
     }
 }
 

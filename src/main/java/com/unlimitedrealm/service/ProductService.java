@@ -1,7 +1,6 @@
 package com.unlimitedrealm.service;
 
 import com.unlimitedrealm.domain.Image;
-import com.unlimitedrealm.domain.PatternType;
 import com.unlimitedrealm.domain.Product;
 import com.unlimitedrealm.domain.Sku;
 import com.unlimitedrealm.repository.ImageRepository;
@@ -73,14 +72,12 @@ public class ProductService {
         return productRepository.findAllVisible();
     }
 
-    public List<Product> findAllVisible(PatternType patternType) {
-        return productRepository.findAllVisible(patternType);
+    public List<Product> findAllVisibleByType(String types) {
+        return productRepository.findAllVisibleByType(types.split(":"));
     }
 
-    public List<Product> findAllVisible(String colors) {
-        String[] colorArray = colors.split(":");
-
-        return productRepository.findAllVisible(colorArray);
+    public List<Product> findAllVisible(String[] colors) {
+        return productRepository.findAllVisibleByColors(colors);
     }
 
     public Product find(String sku) {
