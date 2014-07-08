@@ -4,9 +4,9 @@ $(document).ready(function () {
 });
 
 function colorBoxEvent() {
-
     var colorQuery = ""
     if ($('#black').attr('checked')) {
+        alert('black')
         colorQuery = colorQuery + "black:"
     }
     if ($('#blue').attr('checked')) {
@@ -59,6 +59,7 @@ function colorBoxEvent() {
 
 function selectType() {
     currentSelection = $('#patternType').val()
+    $("#" + currentSelection).addClass('active')
     $("#" + currentSelection).addClass('selected')
 }
 
