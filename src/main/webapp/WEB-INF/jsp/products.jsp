@@ -63,72 +63,72 @@
                 <div class="panel-body smoothscroll maxheight300 color-filter">
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="black" <c:if test="${black}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="black"   name="tour" value="0" <c:if test="${black}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:#333333"></small> Black </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="blue" <c:if test="${blue}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="blue"   name="tour" value="1"  <c:if test="${blue}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:#1664c4"></small> Blue  </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="red" <c:if test="${red}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="red"   name="tour" value="2"  <c:if test="${red}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:#c00707"></small> Red </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="green" <c:if test="${green}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="green"   name="tour" value="3" <c:if test="${green}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:#6fcc14"></small> Green  </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="brown" <c:if test="${brown}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="brown"   name="tour" value="4"  <c:if test="${brown}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:#943f00"></small> Brown  </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="pink" <c:if test="${pink}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="pink"   name="tour" value="5"  <c:if test="${pink}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:#ff1cae"></small> Pink  </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="grey" <c:if test="${grey}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="grey"   name="tour" value="6"  <c:if test="${grey}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:#adadad"></small> Grey </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="purple" <c:if test="${purple}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="purple"   name="tour" value="7"  <c:if test="${purple}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:#5d00dc"></small> Purple </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="yellow" <c:if test="${yellow}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="yellow"   name="tour" value="8"  <c:if test="${yellow}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:#f1f40e"></small> Yellow</label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="orange" <c:if test="${orange}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="orange"   name="tour" value="9"  <c:if test="${orange}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:#ffc600"></small> Orange </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="maroon" <c:if test="${maroon}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="maroon"   name="tour" value="10"  <c:if test="${maroon}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:#9b1d00"></small> Maroon  </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="silver" <c:if test="${silver}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="silver"   name="tour" value="11"  <c:if test="${silver}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:#ecf1ef"></small> Silver </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="golden" <c:if test="${golden}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="golden"   name="tour" value="12"  <c:if test="${golden}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:gold"></small>Golden </label>
                     </div>
                     <div class="block-element">
                         <label>
-                            <input type="checkbox" id="white" <c:if test="${white}">checked</c:if> onclick="colorBoxEvent()"  />
+                            <input type="checkbox" id="white"    name="tour" value="13"  <c:if test="${white}">checked</c:if> onclick="colorBoxEvent()"  />
                             <small style="background-color:#ffffff"></small>White </label>
                     </div>
                     <div class="block-element">

@@ -1,12 +1,15 @@
 $(document).ready(function () {
     selectType()
     gridView('gridView')
+
+    $(".block-element").click(function(event) {
+        colorBoxEvent()
+    });
 });
 
 function colorBoxEvent() {
     var colorQuery = ""
     if ($('#black').attr('checked')) {
-        alert('black')
         colorQuery = colorQuery + "black:"
     }
     if ($('#blue').attr('checked')) {
