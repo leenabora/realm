@@ -1,4 +1,3 @@
-<select name="country">
 <option value="">Country...</option>
 <option value="Afganistan">Afghanistan</option>
 <option value="Albania">Albania</option>
@@ -247,4 +246,3 @@
 <option value="Zaire">Zaire</option>
 <option value="Zambia">Zambia</option>
 <option value="Zimbabwe">Zimbabwe</option>
-</select>

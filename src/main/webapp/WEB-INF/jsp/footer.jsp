@@ -9,10 +9,10 @@
                     <ul>
                         <li class="supportLi">
                             <h4>
-                                <a class="inline" href="mailto:help@tshopweb.com">
+                                <a class="inline" href="mailto:unlimitedrealm1@gmail.com">
                                     <i class="fa fa-envelope-o">
                                     </i>
-                                    help@tshopweb.com
+                                    unlimitedrealm1@gmail.com
                                 </a>
                             </h4>
                         </li>
@@ -21,7 +21,7 @@
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
                     <h3> Shop </h3>
                     <ul>
-                        <li><a href="index.html"> Home </a></li>
+                        <li><a href="<%=request.getContextPath()%>/home.htm"> Home </a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
@@ -30,13 +30,13 @@
                     </h3>
                     <ul>
                         <li>
-                            <a href="about-us.html">
+                            <a href="<%=request.getContextPath()%>/aboutMe.htm">
                                 About us
                             </a>
 
                         </li>
                         <li>
-                            <a href="contact-us.html">
+                            <a href="<%=request.getContextPath()%>/contacts.htm">
                                 Contact us
                             </a>
 
@@ -178,14 +178,11 @@
 
 <!-- include custom script for site  -->
 <script src="<%=request.getContextPath()%>/assets/js/script.js"></script>
-
-<c:if test="${page}.equals('home')">
-    <!-- include custom script for only homepage  -->
+<c:if test="${page eq 'home' }">
     <script src="<%=request.getContextPath()%>/assets/js/home.js"></script>
 </c:if>
 
-<c:if test="${page}.equals('collection')">
-    <!-- include custom script for only homepage  -->
+<c:if test="${page =='collection'}">
     <script src="<%=request.getContextPath()%>/assets/js/collection.js"></script>
 </c:if>
 
@@ -196,6 +193,14 @@
 <script src="<%=request.getContextPath()%>/assets/js/jquery.cycle2.min.js"></script>
 <!-- include easing plugin -->
 <script src="<%=request.getContextPath()%>/assets/js/jquery.easing.1.3.js"></script>
+
+
+<!-- include smoothproducts // product zoom plugin  -->
+<script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/smoothproducts.min.js"/>
+
+<script src="<%=request.getContextPath()%>/assets/js/jquery.minimalect.min.js"/>
+
+<script src="<%=request.getContextPath()%>/assets/js/bootstrap.touchspin.js"/>
 
 </body>
 </html>

@@ -35,7 +35,7 @@ public class ContactsResource {
     public String saveContact(@Valid Contact contact, BindingResult result, HttpServletRequest request, ModelMap model) {
         if (result.hasErrors()) {
             model.addAttribute("contact", contact);
-            return "contacts";
+            return "contact";
         } else {
             contactService.save(contact);
             model.put("showMessage", true);
