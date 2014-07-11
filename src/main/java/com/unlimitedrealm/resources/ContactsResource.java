@@ -38,7 +38,7 @@ public class ContactsResource {
             return "contact";
         } else {
             contactService.save(contact);
-            model.put("showMessage", true);
+            model.addAttribute("success", true);
             return contactPage(model, request);
         }
     }

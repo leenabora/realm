@@ -1097,7 +1097,7 @@ legend {
 	background: url('../../images/site/loading1.gif') center center no-repeat;/* prealoder */
 }
 .banner {
-	margin-top: 70px;
+	margin-top: 50px;
 	-webkit-transition: all 0.1s ease-out 0s;
 	-moz-transition: all 0.1s ease-out 0s;
 	-ms-transition: all 0.1s ease-out 0s;
@@ -2964,7 +2964,7 @@ input.quanitySniper {
 	margin-top: 0 !important;
 }
 .banner {
-	margin-top: 70px !important;
+	margin-top: 50px !important;
 }
 .header-version-2 .banner {
 	margin-top: 130px !important;
@@ -3142,7 +3142,7 @@ h1.xlarge {
 }
 /* ------- banner slider responsive ------- */
 .banner {
-	margin-top: 70px !important;
+	margin-top: 50px !important;
 }
 .sliderTextFull .inner.dark {
 	max-width: 100%;

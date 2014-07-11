@@ -1,6 +1,9 @@
 package com.unlimitedrealm.domain;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Colors {
     boolean black;
     boolean blue;
@@ -16,6 +19,42 @@ public class Colors {
     boolean silver;
     boolean white;
     boolean golden;
+
+    public List<String> getHashColors() {
+        List<String> hashColors = new ArrayList<>();
+        if (black) {
+            hashColors.add("");
+        } else if (black) {
+            hashColors.add("");
+        } else if (blue) {
+            hashColors.add("");
+        } else if (red) {
+            hashColors.add("");
+        } else if (green) {
+            hashColors.add("");
+        } else if (brown) {
+            hashColors.add("");
+        } else if (pink) {
+            hashColors.add("");
+        } else if (grey) {
+            hashColors.add("");
+        } else if (purple) {
+            hashColors.add("");
+        } else if (yellow) {
+            hashColors.add("");
+        } else if (orange) {
+            hashColors.add("");
+        } else if (maroon) {
+            hashColors.add("");
+        } else if (silver) {
+            hashColors.add("");
+        } else if (white) {
+            hashColors.add("");
+        } else if (golden) {
+            hashColors.add("");
+        }
+        return hashColors;
+    }
 
     public boolean isBlack() {
         return black;

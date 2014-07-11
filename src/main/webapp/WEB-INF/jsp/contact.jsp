@@ -8,6 +8,9 @@
 <div class="container main-container headerOffset">
 
     <!-- Main component call to action -->
+  <c:if test="${success}">
+    <div class="alert alert-success">Thank you for contacting us; we will get back to you soon.</div>
+  </c:if>
 
     <div class="container">
         <div class="row">
