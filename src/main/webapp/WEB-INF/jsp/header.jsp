@@ -18,7 +18,6 @@
 
     <!-- Custom styles for this template -->
     <link href="<%=request.getContextPath()%>/assets/css/style.css" rel="stylesheet">
-    <link href="<%=request.getContextPath()%>/assets/css/realm.css" rel="stylesheet">
 
     <!-- styles needed by minimalect -->
     <link href="<%=request.getContextPath()%>/assets/css/jquery.minimalect.min.css" rel="stylesheet">
@@ -28,15 +27,20 @@
     <!-- styles needed by mCustomScrollbar -->
     <link href="<%=request.getContextPath()%>/assets/css/jquery.mCustomScrollbar.css" rel="stylesheet">
 
-    <!-- styles needed by carousel slider -->
-    <link href="<%=request.getContextPath()%>/assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="<%=request.getContextPath()%>/assets/css/owl.theme.css" rel="stylesheet">
+    <link href="<%=request.getContextPath()%>/assets/css/realm.css" rel="stylesheet">
+
     <!-- Just for debugging purposes. -->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
+    <c:if test="${page eq 'home' }">
+    <!-- styles needed by carousel slider -->
+    <link href="<%=request.getContextPath()%>/assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="<%=request.getContextPath()%>/assets/css/owl.theme.css" rel="stylesheet">
+    </c:if>
 
     <!-- include pace script for automatic web page progress bar  -->
 
@@ -45,6 +49,10 @@
         paceOptions = {
             elements: true
         };
+
+        function abc(){
+            alert('checkbox is clicked')
+        }
     </script>
 
     <script src="<%=request.getContextPath()%>/assets/js/pace.min.js"></script>
@@ -158,14 +166,39 @@
 
 <!-- Fixed navbar start -->
 <div class="navbar navbar-tshop navbar-fixed-top megamenu" role="navigation">
+<div class="navbar-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
 
+                <div class="pull-left ">
+                    <ul class="userMenu ">
+                        <li> <a href="#"> <span class="hidden-xs">HELP</span><i class="glyphicon glyphicon-info-sign hide visible-xs "></i> </a> </li>
+                        <li class="phone-number">
+                            <a  href="callto:+8801680531352">
+                                <span> <i class="glyphicon glyphicon-phone-alt "></i></span>
+                                <span class="hidden-xs" style="margin-left:5px"> 88 01680 53 1352 </span> </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
+                <div class="pull-right">
+                    <ul class="userMenu">
+                        <li> <a href="account-1.html"><span class="hidden-xs"> My Account</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li><li> <a href="#"  data-toggle="modal" data-target="#ModalLogin"> <span class="hidden-xs">Sign In</span> <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a> </li>
+                        <li class="hidden-xs"> <a href="#"  data-toggle="modal" data-target="#ModalSignup"> Create Account </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!--/.navbar-top-->
 
 <div class="container">
 <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"> <i class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> Cart ($210.00) </span> </button>
-    <a class="navbar-brand " href="<%=request.getContextPath()%>/home.htm"> <img src="<%=request.getContextPath()%>/images/logo.png" alt="TSHOP"> </a>
+    <a class="navbar-brand " href="index.html"> <img src="<%=request.getContextPath()%>/images/logo.png" alt="TSHOP"> </a>
 
     <!-- this part for mobile -->
     <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
@@ -391,4 +424,5 @@
 <!--/.search-full-->
 
 </div>
-<!-- /.Fixed navbar  -->
+<!-- /.Fixed navbar  --> 
+    
