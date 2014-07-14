@@ -27,7 +27,7 @@
     <!-- styles needed by mCustomScrollbar -->
     <link href="<%=request.getContextPath()%>/assets/css/jquery.mCustomScrollbar.css" rel="stylesheet">
 
-    <link href="<%=request.getContextPath()%>/assets/css/realm.css" rel="stylesheet">
+    <link href="<%=request.getContextPath()%>/css/realm.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. -->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->

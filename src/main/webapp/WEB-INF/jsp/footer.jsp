@@ -183,10 +183,10 @@
 </c:if>
 
 <c:if test="${page =='collection'}">
-    <script src="<%=request.getContextPath()%>/assets/js/collection.js"></script>
+    <script src="<%=request.getContextPath()%>/js/collection.js"></script>
 </c:if>
 
-<script src="<%=request.getContextPath()%>/assets/js/realm.js"></script>
+<script src="<%=request.getContextPath()%>/js/realm.js"></script>
 
 
 <!-- include jqueryCycle plugin -->
