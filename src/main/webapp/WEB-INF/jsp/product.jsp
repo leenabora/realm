@@ -9,9 +9,9 @@
     <div class="col-lg-6 col-md-6 col-sm-6">
         <!-- product Image and Zoom -->
         <div class="main-image sp-wrap col-lg-12 no-padding">
-            <a href="images/zoom/zoom1hi.jpg"><img src="images/zoom/zoom1.jpg" class="img-responsive" alt="img"></a>
-            <a href="images/zoom/zoom2hi.jpg"><img src="images/zoom/zoom2.jpg" class="img-responsive" alt="img"></a>
-            <a href="images/zoom/zoom3hi.jpg"><img src="images/zoom/zoom3.jpg" class="img-responsive" alt="img"></a>
+            <a href="<%=request.getContextPath()%>/images/zoom/zoom1hi.jpg"><img src="<%=request.getContextPath()%>/images/zoom/zoom1.jpg" class="img-responsive" alt="img"></a>
+            <a href="<%=request.getContextPath()%>/images/zoom/zoom2hi.jpg"><img src="<%=request.getContextPath()%>/images/zoom/zoom2.jpg" class="img-responsive" alt="img"></a>
+            <a href="<%=request.getContextPath()%>/images/zoom/zoom3hi.jpg"><img src="<%=request.getContextPath()%>/images/zoom/zoom3.jpg" class="img-responsive" alt="img"></a>
         </div>
     </div><!--/ left column end -->
 

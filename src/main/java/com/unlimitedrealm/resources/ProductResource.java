@@ -64,6 +64,7 @@ public class ProductResource {
         Product product = productService.find(sku);
         List<Comment> comments = commentService.findAllPublished(sku);
         model.addAttribute("product", product);
+        model.addAttribute("page", "product");
         model.addAttribute("comment", new Comment());
         model.addAttribute("comments", comments);
         model.addAttribute("baseUrl", request.getContextPath());

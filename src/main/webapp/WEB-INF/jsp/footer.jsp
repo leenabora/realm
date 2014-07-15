@@ -186,6 +186,13 @@
     <script src="<%=request.getContextPath()%>/js/collection.js"></script>
 </c:if>
 
+
+<c:if test="${page =='product'}">
+
+<!-- include smoothproducts // product zoom plugin  -->
+<script type="text/javascript" src="<%=request.getContextPath()%>/assets/js/smoothproducts.min.js"></script>
+</c:if>
+
 <script src="<%=request.getContextPath()%>/js/realm.js"></script>
 
 

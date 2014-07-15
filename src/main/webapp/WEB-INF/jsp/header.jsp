@@ -38,9 +38,16 @@
 
     <c:if test="${page eq 'home' }">
     <!-- styles needed by carousel slider -->
-    <link href="<%=request.getContextPath()%>/assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="<%=request.getContextPath()%>/assets/css/owl.theme.css" rel="stylesheet">
+       <link href="<%=request.getContextPath()%>/assets/css/owl.carousel.css" rel="stylesheet">
+       <link href="<%=request.getContextPath()%>/assets/css/owl.theme.css" rel="stylesheet">
     </c:if>
+
+    <c:if test="${page eq 'product' }">
+
+    <!-- styles needed by smoothproducts.js for product zoom  -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/smoothproducts.css">
+    </c:if>
+
 
     <!-- include pace script for automatic web page progress bar  -->
 
