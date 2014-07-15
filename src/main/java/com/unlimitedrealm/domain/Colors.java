@@ -23,35 +23,33 @@ public class Colors {
     public List<String> getHashColors() {
         List<String> hashColors = new ArrayList<>();
         if (black) {
-            hashColors.add("");
-        } else if (black) {
-            hashColors.add("");
+            hashColors.add("#000000");
         } else if (blue) {
-            hashColors.add("");
+            hashColors.add("#1664c4");
         } else if (red) {
-            hashColors.add("");
+            hashColors.add("#c00707");
         } else if (green) {
-            hashColors.add("");
+            hashColors.add("#6fcc14");
         } else if (brown) {
-            hashColors.add("");
+            hashColors.add("#943f00");
         } else if (pink) {
-            hashColors.add("");
+            hashColors.add("#ff1cae");
         } else if (grey) {
-            hashColors.add("");
+            hashColors.add("#adadad");
         } else if (purple) {
-            hashColors.add("");
+            hashColors.add("#5d00dc");
         } else if (yellow) {
-            hashColors.add("");
+            hashColors.add("#f1f40e");
         } else if (orange) {
-            hashColors.add("");
+            hashColors.add("#ffc600");
         } else if (maroon) {
-            hashColors.add("");
+            hashColors.add("#9b1d00");
         } else if (silver) {
-            hashColors.add("");
+            hashColors.add("#ecf1ef");
         } else if (white) {
-            hashColors.add("");
+            hashColors.add("#ffffff");
         } else if (golden) {
-            hashColors.add("");
+            hashColors.add("FFD700");
         }
         return hashColors;
     }

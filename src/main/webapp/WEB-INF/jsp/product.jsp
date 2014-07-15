@@ -1,7 +1,6 @@
 <%@ include file="header.jsp" %>
 <%@ page import="com.unlimitedrealm.domain.*" %>
 
-<% Colors colors =  request.getAttribute("product").getColors().getHashColors(); %>
 <div class="container main-container headerOffset">
 
 <div class="row transitionfx">
@@ -22,9 +21,6 @@
 
         <h1 class="product-title"> ${product.name}</h1>
         <h3 class="product-code">Product Code : ${product.sku}</h3>
-        <div class="product-price">
-            <span class="price-sales"> ${product.price}</span>
-        </div>
 
         <div class="details-description">
             <p>${product.description} </p>
@@ -33,10 +29,9 @@
         <div class="color-details">
             <span class="selected-color"><strong>COLOR</strong></span>
             <ul class="swatches Color">
-                <% for(int i=0;i< colors;i++) { if%>
-                <li> <a style="background-color:<c:out value='${colors.get(i)}' />" > </a> </li>
-                <% }%>
-
+                <c:forEach var="color" items="${product.getColors().getHashColors()}">
+                <li> <a style="background-color:${color}" ></a> </li>
+                </c:forEach>
             </ul>
         </div>
         <!--/.color-details-->

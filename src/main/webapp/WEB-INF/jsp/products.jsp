@@ -64,7 +64,7 @@
                     <div class="block-element">
                         <label>
                             <input type="checkbox" id="black"   name="tour" value="0" <c:if test="${black}">checked</c:if> onclick="colorBoxEvent()"  />
-                            <small style="background-color:#333333"></small> Black </label>
+                            <small style="background-color:#000000"></small> Black </label>
                     </div>
                     <div class="block-element">
                         <label>
