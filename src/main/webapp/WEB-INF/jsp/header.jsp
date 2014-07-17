@@ -201,17 +201,8 @@
 <div class="container">
 <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"> <i class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> Cart ($210.00) </span> </button>
     <a class="navbar-brand " href="<%=request.getContextPath()%>/home.htm"> <img src="<%=request.getContextPath()%>/images/logo.png" alt="TSHOP"> </a>
 
-    <!-- this part for mobile -->
-    <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
-        <div class="input-group">
-            <button class="btn btn-nobg" type="button"> <i class="fa fa-search"> </i> </button>
-        </div>
-        <!-- /input-group -->
-
-    </div>
 </div>
 
 <div class="navbar-collapse collapse">
