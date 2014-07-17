@@ -163,7 +163,7 @@
             <div class="item col-sm-4 col-lg-4 col-md-4 col-xs-6 ">
     <div class="product">
         <div class="image">
-            <a href="product-details.html"><img   src="<%=request.getContextPath()%>/images/<%= products.get(i).getSku() %>-list.image" alt="img" class="img-responsive"></a>
+            <a href="<%=request.getContextPath()%>/products/<%= products.get(i).getSku() %>.htm"><img   src="<%=request.getContextPath()%>/images/<%= products.get(i).getSku() %>-list.image" alt="img" class="img-responsive"></a>
             <% if(products.get(i).isNewArrival()) {%>
             <div class="promotion"> <span class="new-product"> NEW</span>  </div>
             <% } %>

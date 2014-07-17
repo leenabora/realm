@@ -119,7 +119,7 @@
     <div class="footer-bottom">
         <div class="container">
             <p class="pull-left">
-                &copy; TSHOP 2014. All right reserved.
+                &copy; THE FASHION REALM 2014. All right reserved.
             </p>
 
             <div class="pull-right paymentMethodImg">
