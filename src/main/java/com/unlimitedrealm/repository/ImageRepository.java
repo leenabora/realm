@@ -28,7 +28,7 @@ public class ImageRepository {
     }
 
     public void saveImage(Image image, String fileName, boolean resize) throws IOException {
-        GridFSInputFile gfsFile = imageCollection.createFile(resize ? image.getResizedContent() : image.getContent());
+        GridFSInputFile gfsFile = imageCollection.createFile(resize ? image.getResizedContent() : image.getMultipartFile().getInputStream());
         gfsFile.setFilename(fileName);
         gfsFile.setMetaData(new BasicDBObject("width", image.getWidth()).append("height", image.getHeight()));
         gfsFile.save();

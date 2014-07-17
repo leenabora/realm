@@ -56,7 +56,7 @@ public class Image {
         return new ByteArrayInputStream(baos.toByteArray());
     }
 
-    public InputStream getContent() {
+    public InputStream getContent() throws IOException{
         return content;
     }
 

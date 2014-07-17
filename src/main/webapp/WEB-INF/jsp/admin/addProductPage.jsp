@@ -203,6 +203,58 @@ pageEncoding="UTF-8" %>
 </div>
 <br/>
 
+
+<div class="divRow">
+    <div class="divCellOuter">
+        <div class="divTableImage">
+            <div class="divRow">
+                <div class="divCellOuter">Upload Detail Back Page Image:</div>
+                <div class="divCellOuter">
+                    <form:input path="detailBackPageImage.multipartFile" type="file"/>
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="divCellOuter">Width</div>
+                <div class="divCellOuter">
+                    <form:input path="detailBackPageImage.width" value="1000"/>
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="divCellOuter">Height</div>
+                <div class="divCellOuter">
+                    <form:input path="detailBackPageImage.height" value="1252"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="divRow">
+    <div class="divCellOuter">
+        <div class="divTableImage">
+            <div class="divRow">
+                <div class="divCellOuter">Upload Detail Back Page Thumbnail Image:</div>
+                <div class="divCellOuter">
+                    <form:input path="detailBackPageThumbnailImage.multipartFile" type="file"/>
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="divCellOuter">Width</div>
+                <div class="divCellOuter">
+                    <form:input path="detailBackPageThumbnailImage.width" value="360"/>
+                </div>
+            </div>
+            <div class="divRow">
+                <div class="divCellOuter">Height</div>
+                <div class="divCellOuter">
+                    <form:input path="detailBackPageThumbnailImage.height" value="527"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+
 <div class="divCellOuter">
     <div class="divTableImage">
 

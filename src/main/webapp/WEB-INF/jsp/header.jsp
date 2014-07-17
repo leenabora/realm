@@ -57,9 +57,6 @@
             elements: true
         };
 
-        function abc(){
-            alert('checkbox is clicked')
-        }
     </script>
 
     <script src="<%=request.getContextPath()%>/assets/js/pace.min.js"></script>
@@ -308,7 +305,7 @@
     <li class="active"> <a href="<%=request.getContextPath()%>/home.htm"> HOME </a> </li>
     <li > <a href="<%=request.getContextPath()%>/products/all.htm"> COLLECTION </a> </li>
     <li > <a href="<%=request.getContextPath()%>/aboutMe.htm"> ABOUT ME </a> </li>
-    <li > <a href="<%=request.getContextPath()%>/contacts.htm"> CONTACT </a> </li>
+    <li > <a href="<%=request.getContextPath()%>/contacts.htm"> CONTACT  </a> </li>
 </ul>
 
 <!--- this part will be hidden for mobile version -->

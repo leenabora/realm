@@ -36,6 +36,12 @@ public class ProductService {
                 if (product.isNewDetailPageThumbnailImage()) {
                     imageRepository.deleteImage(product.getSku() + "-detail-thumbnail");
                 }
+                if (product.isNewDetailBackPageImage()) {
+                    imageRepository.deleteImage(product.getSku() + "-detail-back");
+                }
+                if (product.isNewDetailPageThumbnailImage()) {
+                    imageRepository.deleteImage(product.getSku() + "-detail-back-thumbnail");
+                }
             }
 
             if (product.isNewListPageImage()) {
@@ -48,7 +54,13 @@ public class ProductService {
                 imageRepository.saveImage(product.getDetailPageImage(), product.getSku() + "-detail", product.getResize());
             }
             if (product.isNewDetailPageThumbnailImage()) {
-                imageRepository.saveImage(product.getListPageHoverImage(), product.getSku() + "-detail-thumbnail", product.getResize());
+                imageRepository.saveImage(product.getDetailPageThumbnailImage(), product.getSku() + "-detail-thumbnail", product.getResize());
+            }
+            if (product.isNewDetailBackPageImage()) {
+                imageRepository.saveImage(product.getDetailBackPageImage(), product.getSku() + "-detail-back", product.getResize());
+            }
+            if (product.isNewDetailBackPageThumbnailImage()) {
+                imageRepository.saveImage(product.getDetailBackPageThumbnailImage(), product.getSku() + "-detail-back-thumbnail", product.getResize());
             }
 
             product.clearMultiPartData();

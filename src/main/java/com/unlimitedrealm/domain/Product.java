@@ -20,8 +20,12 @@ public class Product {
 
     Image listPageImage;
     Image listPageHoverImage;
+
     Image detailPageImage;
+    Image detailBackPageImage;
+
     Image detailPageThumbnailImage;
+    Image detailBackPageThumbnailImage;
 
     String statistics;
     String material;
@@ -40,8 +44,12 @@ public class Product {
     public void clearMultiPartData() throws IOException {
         listPageImage.setMultipartFile(null);
         listPageHoverImage.setMultipartFile(null);
+
         detailPageImage.setMultipartFile(null);
         detailPageThumbnailImage.setMultipartFile(null);
+
+        detailBackPageImage.setMultipartFile(null);
+        detailBackPageThumbnailImage.setMultipartFile(null);
     }
 
 
@@ -63,6 +71,16 @@ public class Product {
     @JsonIgnore
     public boolean isNewDetailPageThumbnailImage() {
         return detailPageThumbnailImage.isNewFileUpload();
+    }
+
+    @JsonIgnore
+    public boolean isNewDetailBackPageImage() {
+        return detailBackPageImage.isNewFileUpload();
+    }
+
+    @JsonIgnore
+    public boolean isNewDetailBackPageThumbnailImage() {
+        return detailBackPageThumbnailImage.isNewFileUpload();
     }
 
     public ObjectId get_id() {
@@ -200,5 +218,21 @@ public class Product {
 
     public void setColors(Colors colors) {
         this.colors = colors;
+    }
+
+    public Image getDetailBackPageImage() {
+        return detailBackPageImage;
+    }
+
+    public void setDetailBackPageImage(Image detailBackPageImage) {
+        this.detailBackPageImage = detailBackPageImage;
+    }
+
+    public Image getDetailBackPageThumbnailImage() {
+        return detailBackPageThumbnailImage;
+    }
+
+    public void setDetailBackPageThumbnailImage(Image detailBackPageThumbnailImage) {
+        this.detailBackPageThumbnailImage = detailBackPageThumbnailImage;
     }
 }

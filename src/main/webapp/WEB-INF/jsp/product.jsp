@@ -9,9 +9,10 @@
     <div class="col-lg-6 col-md-6 col-sm-6">
         <!-- product Image and Zoom -->
         <div class="main-image sp-wrap col-lg-12 no-padding">
-            <a href="<%=request.getContextPath()%>/images/zoom/zoom1hi.jpg"><img src="<%=request.getContextPath()%>/images/zoom/zoom1.jpg" class="img-responsive" alt="img"></a>
-            <a href="<%=request.getContextPath()%>/images/zoom/zoom2hi.jpg"><img src="<%=request.getContextPath()%>/images/zoom/zoom2.jpg" class="img-responsive" alt="img"></a>
-            <a href="<%=request.getContextPath()%>/images/zoom/zoom3hi.jpg"><img src="<%=request.getContextPath()%>/images/zoom/zoom3.jpg" class="img-responsive" alt="img"></a>
+
+            <a href="<c:url value='/images/${product.sku}-detail.image'  />"> <img src="<c:url value='/images/${product.sku}-detail-thumbnail.image'/>"  class="img-responsive" alt="img"/></a>
+            <a href="<c:url value='/images/${product.sku}-detail-back.image'  />"> <img src="<c:url value='/images/${product.sku}-detail-back-thumbnail.image'/>"  class="img-responsive" alt="img"/></a>
+
         </div>
     </div><!--/ left column end -->
 
@@ -40,7 +41,7 @@
 
         <div class="cart-actions">
             <div class="addto">
-                <button onclick="productAddToCartForm.submit(this);" class="button btn-cart cart first" title="Add to Cart" type="button">Enquire</button>
+                <button onclick="takeMeThere('/contacts.htm')" class="button btn-cart cart first" title="Add to Cart" type="button">Enquiry</button>
              </div>
 
             <div style="clear:both"></div>
