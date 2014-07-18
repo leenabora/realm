@@ -35,6 +35,7 @@ public class ContactsResource {
     public String saveContact(@Valid Contact contact, BindingResult result, HttpServletRequest request, ModelMap model) {
         if (result.hasErrors()) {
             model.addAttribute("contact", contact);
+            model.addAttribute("page", "contact");
             return "contact";
         } else {
             contactService.save(contact);
@@ -46,6 +47,7 @@ public class ContactsResource {
     private String contactPage(ModelMap model, HttpServletRequest request) {
         model.addAttribute("contact", new Contact());
         model.addAttribute("baseUrl", request.getContextPath());
+        model.addAttribute("page", "contact");
         return "contact";
     }
 }

@@ -172,7 +172,7 @@
             <h4><a href="<%=request.getContextPath()%>/products/<%= products.get(i).getSku() %>.htm"><%= products.get(i).getName() %></a></h4>
             <p><%= products.get(i).getDescription() %></p>
             </div>
-
+s
 
         <div class="action-control">
             <a class="btn btn-primary" href="<%=request.getContextPath()%>/products/<%= products.get(i).getSku() %>.htm">

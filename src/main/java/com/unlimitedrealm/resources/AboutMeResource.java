@@ -17,6 +17,7 @@ public class AboutMeResource {
 
     @RequestMapping(method = GET)
     public String aboutMePage(ModelMap model) {
+        model.addAttribute("page", "aboutMe");
         return "aboutMe";
     }
 }
