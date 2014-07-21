@@ -1,4 +1,16 @@
 <%@ include file="header.jsp" %>
+<%@ page import="java.util.*" %>
+<%@ page import="com.unlimitedrealm.domain.Product" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
+<%
+List<Product> newProducts = (List<Product>)request.getAttribute("newProducts");
+
+
+List<Product> featuredProducts = (List<Product>)request.getAttribute("featuredProducts");
+
+%>
 
 
 <div class="banner">
@@ -70,56 +82,20 @@
     <div class="row featuredPostContainer globalPadding style2">
         <h3 class="section-title style2 text-center"><span>NEW ARRIVALS</span></h3>
         <div id="productslider" class="owl-carousel owl-theme">
+            <%  for (int i = 0; i < newProducts.size(); i++) {     %>
             <div class="item">
                 <div class="product">
-                    <div class="image"> <a href="product-details.html"><img src="<%=request.getContextPath()%>/images/product/34.jpg" alt="img" class="img-responsive"></a>
-                        <div class="promotion"> <span class="new-product"> NEW</span> <span class="discount">15% OFF</span> </div>
+                    <div class="image"> <a href="<%=request.getContextPath()%>/products/<%= newProducts.get(i).getSku() %>.htm"><img src="<%=request.getContextPath()%>/images/<%= newProducts.get(i).getSku() %>-list.image" alt="img" class="img-responsive"/></a>
+                        <div class="promotion"> <span class="new-product"> NEW</span>  </div>
                     </div>
                     <div class="description">
-                        <h4><a href="product-details.html">consectetuer adipiscing </a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        <span class="size">XL / XXL / S </span> </div>
-                    <div class="price"> <span>$25</span> </div>
-                    <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product">
-                    <div class="image"> <a href="product-details.html"><img src="<%=request.getContextPath()%>/images/product/30.jpg" alt="img" class="img-responsive"></a>
-                        <div class="promotion"> <span class="discount">15% OFF</span> </div>
+                        <h4><a href="<%=request.getContextPath()%>/products/<%= newProducts.get(i).getSku() %>.htm"><%= newProducts.get(i).getName() %> </a></h4>
+                        <p><%= newProducts.get(i).getDescription() %> </p>
+                        <div class="action-control"> <a class="btn btn-primary" href="<%=request.getContextPath()%>/products/<%= newProducts.get(i).getSku() %>.htm"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> View </span> </a> </div>
                     </div>
-                    <div class="description">
-                        <h4><a href="product-details.html">luptatum zzril delenit</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        <span class="size">XL / XXL / S </span> </div>
-                    <div class="price"> <span>$25</span> </div>
-                    <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="product">
-                    <div class="image"> <a href="product-details.html"><img src="<%=request.getContextPath()%>/images/product/36.jpg" alt="img" class="img-responsive"></a>
-                        <div class="promotion"> <span class="new-product"> NEW</span> </div>
-                    </div>
-                    <div class="description">
-                        <h4><a href="product-details.html">eleifend option </a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        <span class="size">XL / XXL / S </span> </div>
-                    <div class="price"> <span>$25</span> </div>
-                    <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="product">
-                    <div class="image"> <a href="product-details.html"><img src="<%=request.getContextPath()%>/images/product/9.jpg" alt="img" class="img-responsive"></a> </div>
-                    <div class="description">
-                        <h4><a href="product-details.html">mutationem consuetudium </a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        <span class="size">XL / XXL / S </span> </div>
-                    <div class="price"> <span>$25</span> </div>
-                    <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
-                </div>
-            </div>
+                <%}%>
 
         </div>
         <!--/.productslider-->
@@ -155,59 +131,22 @@
     <h3 class="section-title style2 text-center"><span>FEATURES PRODUCT</span></h3>
     <div class="container">
         <div class="row xsResponse">
+            <%  for (int i = 0; i < featuredProducts.size(); i++) {     %>
+
             <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
                 <div class="product">
-                    <div class="image"> <a href="product-details.html"><img src="<%=request.getContextPath()%>/images/product/30.jpg" alt="img" class="img-responsive"></a>
-                        <div class="promotion"> <span class="new-product"> NEW</span> <span class="discount">15% OFF</span> </div>
+                    <div class="image"> <a href="<%=request.getContextPath()%>/products/<%= featuredProducts.get(i).getSku() %>.htm"><img src="<%=request.getContextPath()%>/images/<%= featuredProducts.get(i).getSku() %>-list.image" alt="img" class="img-responsive"></a>
                     </div>
                     <div class="description">
-                        <h4><a href="product-details.html">aliquam erat volutpat</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        <span class="size">XL / XXL / S </span> </div>
-                    <div class="price"> <span>$25</span> </div>
-                    <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
-                </div>
-            </div>
-            <!--/.item-->
-            <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                <div class="product">
-                    <div class="image"> <a href="product-details.html"><img src="<%=request.getContextPath()%>/images/product/31.jpg" alt="img" class="img-responsive"></a>
-                        <div class="promotion"> <span class="discount">15% OFF</span> </div>
+                        <h4><a href="<%=request.getContextPath()%>/products/<%= featuredProducts.get(i).getSku() %>.htm"><%= featuredProducts.get(i).getName() %> </a></h4>
+                        <p><%= featuredProducts.get(i).getDescription() %> </p>
+                        <div class="action-control"> <a class="btn btn-primary" href="<%=request.getContextPath()%>/products/<%= featuredProducts.get(i).getSku() %>.htm"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> View </span> </a> </div>
                     </div>
-                    <div class="description">
-                        <h4><a href="product-details.html">ullamcorper suscipit lobortis </a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        <span class="size">XL / XXL / S </span> </div>
-                    <div class="price"> <span>$25</span> </div>
-                    <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
                 </div>
             </div>
-            <!--/.item-->
-            <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                <div class="product">
-                    <div class="image"> <a href="product-details.html"><img src="<%=request.getContextPath()%>/images/product/34.jpg" alt="img" class="img-responsive"></a>
-                        <div class="promotion"> <span class="new-product"> NEW</span> </div>
-                    </div>
-                    <div class="description">
-                        <h4><a href="product-details.html">demonstraverunt lectores </a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        <span class="size">XL / XXL / S </span> </div>
-                    <div class="price"> <span>$25</span> </div>
-                    <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
-                </div>
-            </div>
-            <!--/.item-->
-            <div class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                <div class="product">
-                    <div class="image"> <a href="product-details.html"><img src="<%=request.getContextPath()%>/images/product/12.jpg" alt="img" class="img-responsive"></a> </div>
-                    <div class="description">
-                        <h4><a href="product-details.html">humanitatis per</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        <span class="size">XL / XXL / S </span> </div>
-                    <div class="price"> <span>$25</span> </div>
-                    <div class="action-control"> <a class="btn btn-primary"> <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span> </a> </div>
-                </div>
-            </div>
+            <%}%>
+
+
 
         </div>
         <!-- /.row -->

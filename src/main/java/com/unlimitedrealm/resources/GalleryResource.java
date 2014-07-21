@@ -4,11 +4,12 @@ package com.unlimitedrealm.resources;
 import com.unlimitedrealm.domain.Product;
 import com.unlimitedrealm.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -23,6 +24,10 @@ public class GalleryResource {
 
     @RequestMapping(value = "home.htm", method = GET)
     public String galleryPage(ModelMap model) {
+        List<Product> newProducts = productService.findNewProducts();
+        List<Product> featuredProducts = productService.findFeaturedProducts();
+        model.addAttribute("newProducts", newProducts);
+        model.addAttribute("featuredProducts", featuredProducts);
         model.addAttribute("page", "home");
         return "home";
     }

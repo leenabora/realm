@@ -93,6 +93,14 @@ public class ProductService {
         return productRepository.findAllVisibleByColors(colors);
     }
 
+    public List<Product> findFeaturedProducts() {
+        return productRepository.findFeaturedProducts();
+    }
+
+    public List<Product> findNewProducts() {
+        return productRepository.findNewProducts();
+    }
+
     public Product find(String sku) {
         return productRepository.find(sku);
     }

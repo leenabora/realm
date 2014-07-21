@@ -65,6 +65,16 @@ public class ProductRepository {
         return buildProductList(productCursor);
     }
 
+    public List<Product> findFeaturedProducts() {
+        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("showInHomePageFeaturedProductSection", true));
+        return buildProductList(productCursor);
+    }
+
+    public List<Product> findNewProducts() {
+        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("showInHomePageNewArrivalSection", true));
+        return buildProductList(productCursor);
+    }
+
     public List<Product> findAllVisibleByColors(String[] colors) {
         ArrayList orList = new ArrayList();
         for (String color : colors) {
