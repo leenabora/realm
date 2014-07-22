@@ -27,9 +27,6 @@ public class ProductService {
                 if (product.isNewListPageImage()) {
                     imageRepository.deleteImage(product.getSku() + "-list");
                 }
-                if (product.isNewListPageHoverImage()) {
-                    imageRepository.deleteImage(product.getSku() + "-list-hover");
-                }
                 if (product.isNewDetailPageImage()) {
                     imageRepository.deleteImage(product.getSku() + "-detail");
                 }
@@ -46,9 +43,6 @@ public class ProductService {
 
             if (product.isNewListPageImage()) {
                 imageRepository.saveImage(product.getListPageImage(), product.getSku() + "-list", product.getResize());
-            }
-            if (product.isNewListPageHoverImage()) {
-                imageRepository.saveImage(product.getListPageHoverImage(), product.getSku() + "-list-hover", product.getResize());
             }
             if (product.isNewDetailPageImage()) {
                 imageRepository.saveImage(product.getDetailPageImage(), product.getSku() + "-detail", product.getResize());

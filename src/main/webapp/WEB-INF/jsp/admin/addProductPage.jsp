@@ -125,31 +125,6 @@ pageEncoding="UTF-8" %>
 </div>
 <br/>
 
-<div class="divRow">
-    <div class="divCellOuter">
-        <div class="divTableImage">
-            <div class="divRow">
-                <div class="divCellOuter">Upload List Page Hover Image:</div>
-                <div class="divCellOuter">
-                    <form:input path="listPageHoverImage.multipartFile" type="file"/>
-                </div>
-            </div>
-            <div class="divRow">
-                <div class="divCellOuter">Width</div>
-                <div class="divCellOuter">
-                    <form:input path="listPageHoverImage.width" value="285"/>
-                </div>
-            </div>
-            <div class="divRow">
-                <div class="divCellOuter">Height</div>
-                <div class="divCellOuter">
-                    <form:input path="listPageHoverImage.height" value="380"/>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br/>
 
 <div class="divRow">
     <div class="divCellOuter">

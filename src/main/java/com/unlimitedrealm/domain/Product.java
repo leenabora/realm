@@ -19,7 +19,6 @@ public class Product {
     boolean showInHomePageFeaturedProductSection;
 
     Image listPageImage;
-    Image listPageHoverImage;
 
     Image detailPageImage;
     Image detailBackPageImage;
@@ -43,7 +42,6 @@ public class Product {
     @JsonIgnore
     public void clearMultiPartData() throws IOException {
         listPageImage.setMultipartFile(null);
-        listPageHoverImage.setMultipartFile(null);
 
         detailPageImage.setMultipartFile(null);
         detailPageThumbnailImage.setMultipartFile(null);
@@ -56,11 +54,6 @@ public class Product {
     @JsonIgnore
     public boolean isNewListPageImage() {
         return listPageImage.isNewFileUpload();
-    }
-
-    @JsonIgnore
-    public boolean isNewListPageHoverImage() {
-        return listPageHoverImage.isNewFileUpload();
     }
 
     @JsonIgnore
@@ -153,14 +146,6 @@ public class Product {
 
     public void setListPageImage(Image listPageImage) {
         this.listPageImage = listPageImage;
-    }
-
-    public Image getListPageHoverImage() {
-        return listPageHoverImage;
-    }
-
-    public void setListPageHoverImage(Image listPageHoverImage) {
-        this.listPageHoverImage = listPageHoverImage;
     }
 
     public Image getDetailPageImage() {

@@ -137,37 +137,6 @@ pageEncoding="UTF-8" %>
         <div class="divTableImage">
             <div class="divRow">
                 <div class="divCellOuter">
-                    <img src="<c:url value='/images/${product.sku}-list-hover.image'  />"/>
-                </div>
-            </div>
-            <div class="divRow">
-                <div class="divCellOuter">Upload List Page Hover Image:</div>
-                <div class="divCellOuter">
-                    <form:input path="listPageHoverImage.multipartFile" type="file"/>
-                </div>
-            </div>
-            <div class="divRow">
-                <div class="divCellOuter">Width</div>
-                <div class="divCellOuter">
-                    <form:input path="listPageHoverImage.width" value="360"/>
-                </div>
-            </div>
-            <div class="divRow">
-                <div class="divCellOuter">Height</div>
-                <div class="divCellOuter">
-                    <form:input path="listPageHoverImage.height" value="527"/>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br/>
-
-<div class="divRow">
-    <div class="divCellOuter">
-        <div class="divTableImage">
-            <div class="divRow">
-                <div class="divCellOuter">
                     <img src="<c:url value='/images/${product.sku}-detail.image'  />"/>
                 </div>
             </div>
