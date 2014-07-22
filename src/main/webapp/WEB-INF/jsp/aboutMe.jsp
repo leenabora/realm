@@ -68,20 +68,16 @@
                 that my craft brings as much joy to others as it does to me.
             </p>
 
-            <br/>
+            <div class="lead text-left">
+            I present to you -
+            </div>
 
-            <p class="lead text-left">
-                <strong class="present">
-                    I present to you -
-                </strong>
-            </p>
-
-            <p class="lead text-left logo">
-                Fashion
-
-                <strong class="logo-fashion"> Unlimited </strong>
-                <strong class="logo-tagline"> because you are unique!!!</strong>
-            </p>
+            <div class="logo">
+                <img src="<%=request.getContextPath()%>/images/logo2.png" alt="THE FASHION REALM"/>
+            </div>
+            <div class="tag">
+                <img src="<%=request.getContextPath()%>/images/logo3.png" alt="THE FASHION REALM"/>
+            </div>
           <hr class="hr hr30">
         </div>
       </div>  <!--/row end-->
