@@ -94,7 +94,7 @@
 
                                     <!-- Button -->
                                     <div class="form-group">
-                                        <div class="col-md-4">
+                                        <div class="col-md-7 pull-right">
                                             <button id="singlebutton" name="singlebutton" class="btn btn-primary"
                                                     onclick="document.getElementById('form').submit()">SEND
                                             </button>
