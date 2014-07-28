@@ -267,10 +267,10 @@ pageEncoding="UTF-8" %>
             <div class="divCellOuter">Pattern:</div>
             <div class="divCellOuter">
                 <form:select path="patternType">
-                    <option value="Lehenga">Lehenga</option>
-                    <option value="Salwar_Suit">Salwar_Suit</option>
-                    <option value="Midi">Midi</option>
-                    <option value="Skirt">Skirt</option>
+                    <option <c:if test="${product.patternType eq 'Lehenga'}">selected</c:if>  value="Lehenga">Lehenga</option>
+                    <option <c:if test="${product.patternType eq 'Salwar_Suit'}">selected</c:if> value="Salwar_Suit">Salwar_Suit</option>
+                    <option <c:if test="${product.patternType eq 'Midi'}">selected</c:if> value="Midi">Midi</option>
+                    <option <c:if test="${product.patternType eq 'Skirt'}">selected</c:if> value="Skirt">Skirt</option>
                 </form:select>
             </div>
         </div>
