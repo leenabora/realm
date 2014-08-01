@@ -73,11 +73,14 @@
             </div>
 
             <div class="logo">
-                <img src="<%=request.getContextPath()%>/images/favicon.png" alt="THE FASHION REALM"/>
+                <img class="aboutMeLogoImage" src="<%=request.getContextPath()%>/images/favicon.png" alt="THE FASHION REALM"/>
+                <img class="aboutMeLogoText" src="<%=request.getContextPath()%>/images/logo1.png" alt="THE FASHION REALM"/>
             </div>
+<!--
             <div class="tag">
-                <img src="<%=request.getContextPath()%>/images/Logo_newest.png" alt="THE FASHION REALM"/>
+                <img src="<%=request.getContextPath()%>/images/logo1.png" alt="THE FASHION REALM"/>
             </div>
+-->
           <hr class="hr hr30">
         </div>
       </div>  <!--/row end-->
