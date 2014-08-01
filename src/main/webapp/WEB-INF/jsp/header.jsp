@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%=request.getContextPath()%>/assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%=request.getContextPath()%>/assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="<%=request.getContextPath()%>/assets/ico/favicon.png">
+    <link rel="shortcut icon" href="<%=request.getContextPath()%>/images/favicon.png">
     <title>The Fashion Realm </title>
     <!-- Bootstrap core CSS -->
     <link href="<%=request.getContextPath()%>/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -84,8 +84,10 @@
             <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
                 <div class="pull-right">
                     <ul class="userMenu">
+<!--
                         <li> <a href="account-1.html"><span class="hidden-xs"> My Account</span> <i class="glyphicon glyphicon-user hide visible-xs "></i></a> </li><li> <a href="#"  data-toggle="modal" data-target="#ModalLogin"> <span class="hidden-xs">Sign In</span> <i class="glyphicon glyphicon-log-in hide visible-xs "></i> </a> </li>
                         <li class="hidden-xs"> <a href="#"  data-toggle="modal" data-target="#ModalSignup"> Create Account </a> </li>
+-->
                     </ul>
                 </div>
             </div>
@@ -97,12 +99,13 @@
 <div class="container">
 <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
-    <a class="navbar-brand " href="<%=request.getContextPath()%>/home.htm"> <img src="<%=request.getContextPath()%>/images/logo1.png" alt="THE FASHION REALM"/> </a>
+    <a class="navbar-brand " href="<%=request.getContextPath()%>/home.htm"> <img  class="realmlogoimage" src="<%=request.getContextPath()%>/images/favicon.png" alt="THE FASHION REALM"/> </a>
+    <a class="navbar-brand " href="<%=request.getContextPath()%>/home.htm"> <img  class="realmlogo" src="<%=request.getContextPath()%>/images/Logo_newest.png" alt="THE FASHION REALM"/> </a>
 
 </div>
 
 <div class="navbar-collapse collapse">
-<ul class="nav navbar-nav">
+<ul class="nav navbar-nav navbar-right">
     <li id="home"> <a href="<%=request.getContextPath()%>/home.htm"> HOME </a> </li>
     <li id="collection" > <a href="<%=request.getContextPath()%>/products/all.htm"> COLLECTION </a> </li>
     <li id="aboutMe" > <a href="<%=request.getContextPath()%>/aboutMe.htm"> ABOUT ME </a> </li>

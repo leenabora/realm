@@ -73,10 +73,10 @@
             </div>
 
             <div class="logo">
-                <img src="<%=request.getContextPath()%>/images/logo2.png" alt="THE FASHION REALM"/>
+                <img src="<%=request.getContextPath()%>/images/favicon.png" alt="THE FASHION REALM"/>
             </div>
             <div class="tag">
-                <img src="<%=request.getContextPath()%>/images/logo3.png" alt="THE FASHION REALM"/>
+                <img src="<%=request.getContextPath()%>/images/Logo_newest.png" alt="THE FASHION REALM"/>
             </div>
           <hr class="hr hr30">
         </div>
