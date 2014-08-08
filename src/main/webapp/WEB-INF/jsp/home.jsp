@@ -19,48 +19,55 @@ List<Product> featuredProducts = (List<Product>)request.getAttribute("featuredPr
             <ul id="pager" class="container">
             </ul>
             <div class="slider slider-v2">
-                <div class="slider-item slider-item-img1 " data-cycle-pager-template="<a href=#> LATEST COLLECTION </a>">
+                <div class="slider-item slider-item-img1 " data-cycle-pager-template="<a href=#> CELEBRATE FASHION </a>">
                     <div class="sliderInfo">
                         <div class="container">
-                            <div class="col-lg-5 col-md-5 col-sm-5 pull-right sliderText dark alpha80 hidden-xs">
+                            <div class="col-lg-4 col-md-4 col-sm-4 pull-right sliderText dark alpha80 hidden-xs">
                                 <div class="inner">
-                                    <h1>LATEST COLLECTION</h1>
-                                    <p class="hidden-xs"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut
-                                        laoreet dolore magna aliquam erat volutpa </p>
-                                    <a  href="category.html" class="slide-link">SHOP NOW <span class="arrowUnicode">►</span></a> </div>
+                                    <h1>CELEBRATE FASHION</h1>
+                                    <div class="hidden-xs"> &quot;I don't do fashion, I AM fashion.&quot;
+                                    <div class="bannerTagMore">
+                                        --- Coco Chanel
+                                    </div>
+                                    </div>
+                                 </div>
                             </div>
                         </div>
                     </div>
                     <img  alt="img" src="<%=request.getContextPath()%>/images/slider/slider3.jpg" class="img-responsive parallaximg sliderImg"> </div>
                 <!--/.slider-item-->
 
-                <div class="slider-item slider-item-img2  parallax" data-cycle-pager-template="<a href=#> WOMEN COLLECTION </a>">
+                <div class="slider-item slider-item-img2  parallax" data-cycle-pager-template="<a href=#> UNLIMITED FASHION </a>">
                     <div class="sliderInfo">
                         <div class="container">
                             <div class="col-lg-5 col-md-5 col-sm-5 pull-left sliderText dark alpha80 hidden-xs">
                                 <div class="inner">
-                                    <h1>WOMEN COLLECTION</h1>
-                                    <p class="hidden-xs"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut
-                                        laoreet dolore magna aliquam erat volutpa </p>
-                                    <a href="category.html"  class="slide-link">SHOP NOW <span class="arrowUnicode">►</span></a> </div>
+                                    <h1>UNLIMITED FASHION</h1>
+                                    <div class="hidden-xs"> &quot;Fashions fade, style is eternal.&quot;
+                                    <div class="bannerTag">
+                                        --- Yves Saint-Laurent
+                                    </div>
+                                    </div>
+                                 </div>
                             </div>
                         </div>
                     </div>
                     <img alt="img" src="<%=request.getContextPath()%>/images/slider/slider4.jpg" class="img-responsive parallaximg sliderImg"> </div>
                 <!--/.slider-item-->
 
-                <div class="slider-item slider-item-img3  parallax" data-cycle-pager-template="<a href=#> NEW COLLECTION </a>">
+                <div class="slider-item slider-item-img3  parallax" data-cycle-pager-template="<a href=#> CINDERELLA FASHION </a>">
                     <div class="sliderInfo">
                         <div class="container">
-                            <div class="col-lg-4 col-md-4 col-sm-5 pull-right sliderText dark alpha80 transformRight hidden-xs">
-                                <div class="inner">
-                                    <h1>NEW COLLECTION</h1>
-                                    <p class="hidden-xs"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                        sed diam nonummy nibh euismod tincidunt ut
-                                        laoreet dolore magna aliquam erat volutpa </p>
-                                    <a href="category.html"  class="slide-link">SHOP NOW <span class="arrowUnicode">►</span></a> </div>
+                            <div class="col-lg-5 col-md-5 col-sm-5 pull-left sliderText dark alpha80 hidden-xs">
+                            <div class="inner">
+                                    <h1>CINDERELLA FASHION</h1>
+                                    <div class="hidden-xs"> &quot;In the fashion industry, everything goes retro except the prices.&quot;
+                                        <div class="bannerTag">
+                                        --- Criss Jami
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>

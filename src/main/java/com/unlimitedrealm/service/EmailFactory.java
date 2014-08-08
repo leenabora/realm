@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class EmailFactory {
 
-    @Value("${logo}")
-    String logo;
+    @Value("${imagePath}")
+    String imagePath;
 
     @Value("${productImage}")
     String productImage;
@@ -39,7 +39,8 @@ public class EmailFactory {
     public String thanksForContacting(Contact contact) {
         thanksForContactingEmail.reset();
         thanksForContactingEmail.setAttribute("name", contact.getName());
-        thanksForContactingEmail.setAttribute("logo", logo);
+        thanksForContactingEmail.setAttribute("logoImage", imagePath + "/favicon.png");
+        thanksForContactingEmail.setAttribute("logoText", imagePath + "/logo1.png");
         return thanksForContactingEmail.toString();
     }
 
