@@ -22,11 +22,11 @@ List<Product> featuredProducts = (List<Product>)request.getAttribute("featuredPr
                 <div class="slider-item slider-item-img1 " data-cycle-pager-template="<a href=#> CELEBRATE FASHION </a>">
                     <div class="sliderInfo">
                         <div class="container">
-                            <div class="col-lg-4 col-md-4 col-sm-4 pull-right sliderText dark alpha80 hidden-xs">
+                            <div class="col-lg-5 col-md-4 col-sm-5 pull-right sliderText dark alpha80 hidden-xs">
                                 <div class="inner">
                                     <h1>CELEBRATE FASHION</h1>
                                     <div class="hidden-xs"> &quot;I don't do fashion, I AM fashion.&quot;
-                                    <div class="bannerTagMore">
+                                    <div class="bannerTag1">
                                         --- Coco Chanel
                                     </div>
                                     </div>
@@ -44,7 +44,7 @@ List<Product> featuredProducts = (List<Product>)request.getAttribute("featuredPr
                                 <div class="inner">
                                     <h1>UNLIMITED FASHION</h1>
                                     <div class="hidden-xs"> &quot;Fashions fade, style is eternal.&quot;
-                                    <div class="bannerTag">
+                                    <div class="bannerTag2">
                                         --- Yves Saint-Laurent
                                     </div>
                                     </div>
@@ -62,7 +62,7 @@ List<Product> featuredProducts = (List<Product>)request.getAttribute("featuredPr
                             <div class="inner">
                                     <h1>CINDERELLA FASHION</h1>
                                     <div class="hidden-xs"> &quot;In the fashion industry, everything goes retro except the prices.&quot;
-                                        <div class="bannerTag">
+                                        <div class="bannerTag3">
                                         --- Criss Jami
                                         </div>
                                     </div>
