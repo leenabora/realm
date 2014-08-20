@@ -198,7 +198,14 @@ pageEncoding="UTF-8" %>
 
 <div class="divRow">
     <div class="divCellOuter">
+
+
         <div class="divTableImage">
+            <div class="divRow">
+                <div class="divCellOuter">
+                    <img src="<c:url value='/images/${product.sku}-detail-back.image'  />"/>
+                </div>
+            </div>
             <div class="divRow">
                 <div class="divCellOuter">Upload Detail Back Page Image:</div>
                 <div class="divCellOuter">
@@ -224,6 +231,11 @@ pageEncoding="UTF-8" %>
 <div class="divRow">
     <div class="divCellOuter">
         <div class="divTableImage">
+            <div class="divRow">
+                <div class="divCellOuter">
+                    <img src="<c:url value='/images/${product.sku}-detail-back-thumbnail.image'  />"/>
+                </div>
+            </div>
             <div class="divRow">
                 <div class="divCellOuter">Upload Detail Back Page Thumbnail Image:</div>
                 <div class="divCellOuter">

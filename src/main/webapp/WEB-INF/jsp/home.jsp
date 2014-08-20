@@ -55,12 +55,12 @@ List<Product> featuredProducts = (List<Product>)request.getAttribute("featuredPr
                     <img alt="img" src="<%=request.getContextPath()%>/images/slider/slider4.jpg" class="img-responsive parallaximg sliderImg"> </div>
                 <!--/.slider-item-->
 
-                <div class="slider-item slider-item-img3  parallax" data-cycle-pager-template="<a href=#> CINDERELLA FASHION </a>">
+                <div class="slider-item slider-item-img3  parallax" data-cycle-pager-template="<a href=#> AGILE FASHION </a>">
                     <div class="sliderInfo">
                         <div class="container">
                             <div class="col-lg-5 col-md-5 col-sm-5 pull-left sliderText dark alpha80 hidden-xs">
                             <div class="inner">
-                                    <h1>CINDERELLA FASHION</h1>
+                                    <h1>AGILE FASHION</h1>
                                     <div class="hidden-xs"> &quot;In the fashion industry, everything goes retro except the prices.&quot;
                                         <div class="bannerTag3">
                                         --- Criss Jami

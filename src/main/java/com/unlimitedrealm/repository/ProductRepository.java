@@ -61,17 +61,17 @@ public class ProductRepository {
     }
 
     public List<Product> findAllVisible() {
-        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("show", true));
+        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("show", true)).sort(new BasicDBObject("sku",1));
         return buildProductList(productCursor);
     }
 
     public List<Product> findFeaturedProducts() {
-        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("showInHomePageFeaturedProductSection", true));
+        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("showInHomePageFeaturedProductSection", true)).sort(new BasicDBObject("sku",1));
         return buildProductList(productCursor);
     }
 
     public List<Product> findNewProducts() {
-        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("showInHomePageNewArrivalSection", true));
+        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("showInHomePageNewArrivalSection", true)).sort(new BasicDBObject("sku",1));
         return buildProductList(productCursor);
     }
 
@@ -93,7 +93,7 @@ public class ProductRepository {
     }
 
     private List<Product> executeOrQuery(ArrayList orList) {
-        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("$or", orList));
+        DBCursor<Product> productCursor = productCollection.find(new BasicDBObject("$or", orList)).sort(new BasicDBObject("sku",1));
         return buildProductList(productCursor);
     }
 
