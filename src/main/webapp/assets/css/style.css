@@ -1107,11 +1107,18 @@ legend {
 .banner.down {
 	margin-top: 26px;
 }
-.banner, .slider-content, .slider, .slider-v2 {
+.banner {
 	width: 100%;
 	display: block;
-	max-height: 540px;
+	max-height: 615px;
 	height: auto;
+	overflow: hidden;
+}
+ .slider-content, .slider, .slider-v2 {
+	width: 100%;
+	display: block;
+	max-height: 620px;
+	height: 613px;
 	overflow: hidden;
 	position: relative;
 }
