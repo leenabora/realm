@@ -20,6 +20,6 @@ function takeMeThere(location){
 
 window.onerror = function (msg, url, line) {
     var message = "Error : " + msg + ", line: " + line + ", url: " + url;
-    alert(message)
+//    alert(message)
 //    console.log(message)
 }
