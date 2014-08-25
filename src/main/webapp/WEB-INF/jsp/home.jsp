@@ -34,7 +34,7 @@ List<Product> featuredProducts = (List<Product>)request.getAttribute("featuredPr
                             </div>
                         </div>
                     </div>
-                    <img  alt="img" src="<%=request.getContextPath()%>/images/slider/banner1_new.jpg" class="img-responsive parallaximg sliderImg"> </div>
+                    <img  alt="img" src="<%=request.getContextPath()%>/images/slider/banner2_new.jpg" class="img-responsive parallaximg sliderImg"> </div>
                 <!--/.slider-item-->
 
                 <div class="slider-item slider-item-img2  parallax" data-cycle-pager-template="<a href=#> CELEBRATE FASHION </a>">
@@ -52,7 +52,7 @@ List<Product> featuredProducts = (List<Product>)request.getAttribute("featuredPr
                             </div>
                         </div>
                     </div>
-                    <img alt="img" src="<%=request.getContextPath()%>/images/slider/banner2_new.jpg" class="img-responsive parallaximg sliderImg"> </div>
+                    <img alt="img" src="<%=request.getContextPath()%>/images/slider/banner1_new.jpg" class="img-responsive parallaximg sliderImg"> </div>
                 <!--/.slider-item-->
 
                 <div class="slider-item slider-item-img3  parallax" data-cycle-pager-template="<a href=#> AGILE FASHION </a>">
