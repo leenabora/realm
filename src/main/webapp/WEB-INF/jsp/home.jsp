@@ -180,8 +180,8 @@ List<Product> featuredProducts = (List<Product>)request.getAttribute("featuredPr
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="parallax-content clearfix">
-                        <h1 class="xlarge"> Trusted Seller 500+ </h1>
-                        <h5 class="parallaxSubtitle"> Lorem ipsum dolor sit amet consectetuer </h5>
+                        <h1 class="xlarge"> Trusted Seller </h1>
+                        <h5 class="parallaxSubtitle"> Only for fashion passionate... </h5>
                     </div>
                 </div>
             </div>

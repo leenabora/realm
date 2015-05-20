@@ -119,22 +119,13 @@
     <div class="footer-bottom">
         <div class="container">
             <p class="pull-left">
-                &copy; THE FASHION REALM 2014. All right reserved.
+                &copy; THE FASHION REALM 2015. All right reserved.
             </p>
 
             <div class="pull-right paymentMethodImg">
 
-                <img height="30" class="pull-right"
-                     src="<%=request.getContextPath()%>/images/site/payment/master_card.png" alt="img">
-                <img height="30" class="pull-right" src="<%=request.getContextPath()%>/images/site/payment/paypal.png"
-                     alt="img">
-                <img height="30" class="pull-right"
-                     src="<%=request.getContextPath()%>/images/site/payment/american_express_card.png" alt="img">
-                <img height="30" class="pull-right"
-                     src="<%=request.getContextPath()%>/images/site/payment/discover_network_card.png" alt="img">
-                <img height="30" class="pull-right"
-                     src="<%=request.getContextPath()%>/images/site/payment/google_wallet.png" alt="img">
-            </div>
+             </div>
+             </div>
 
 
         </div>
